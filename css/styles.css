@@ -1,0 +1,358 @@
+/*Global Styles
+*****************************************************************/
+
+/* apply a natural box layout model to all elements, but allowing components to change ****************************************************/
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  font-family: 'News Cycle', sans-serif;
+  font-size: 18px;
+  margin: 0;
+}
+h1{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px;
+}
+}
+h2 {
+  font-size: 25px;
+  margin-top: 0;
+}
+h3{
+  margin:0;
+}
+h4{
+  font-family: 'News Cycle', sans-serif;
+  padding:0;
+  margin:0;
+}
+p{
+  margin-bottom: 0;
+}
+.center-align{
+  text-align: inherit;
+}
+
+
+/*Navigation
+****************************************************/
+nav{
+  text-align: center;
+  background:white;
+  position: fixed;
+  top:0;
+  width:100%;
+  z-index: +2;
+
+}
+nav a{
+  display:inline-block;
+  padding: 10px 10px;
+  font-weight: bold;
+}
+
+
+/*Slideshow
+*************************************************************/
+* {box-sizing:border-box}
+
+/* Slideshow container */
+* {box-sizing:border-box}
+
+.mySlides {display:none}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 800px;
+  max-height: 100vh;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: black;
+  font-size: 15px;
+  padding: 20px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 3s;
+  animation-name: fade;
+  animation-duration: 3s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+
+/*Controlling the Links
+****************************************************/
+.fancy-links{
+  color: #ee233c
+}
+.fancy-links:link{
+  position: relative;
+  text-decoration: none;
+}
+.fancy-links:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: #ee233c;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+.fancy-links:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+
+/*Controlling the width of content
+****************************************************/
+.content-wrap{
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 50px 50px;
+  overflow: auto;
+}
+
+
+/*Following code is commented out for Responsiveness
+****************************************************/
+/*.col-narrow{
+  width: 30%;
+  float:left;
+  padding-right: 3%;
+}
+.col-wide{
+  width:70%;
+  float:left;
+}*/
+
+.topLess{
+  margin-top: 0;
+}
+ul{
+  list-style-type: disc;
+}
+.upperCase{
+  text-transform: uppercase;
+}
+
+
+/*Header and Footer
+****************************************************/
+header, footer {
+  background: white;
+  color:rgb(64, 64, 64);
+}
+
+
+/*Header
+*******/
+header{
+  padding-top: 20px;
+  position: relative;
+}
+
+
+/*Devang Chauhan
+*********/
+header h1, header h2{
+  color:black;
+  margin: 0;
+}
+.profile-img{
+  border-radius:50%;
+}
+header.i {
+  color: red;
+}
+.content-wrap-me{
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 250px 50px;
+  overflow: auto;
+}
+
+
+/*About Me
+****************************************************/
+.About-me{
+  background: white;
+  background-size: cover;
+  background-position:
+}
+.content-wrap-about{
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 50px 50px;
+  overflow: auto;
+}
+
+
+/*Work
+****************************************************/
+.masonry {
+    margin: 1.5em 0;
+    padding: 0;
+    column-gap: 1.5em;
+    font-size: .85em;
+    column-count: 2;
+    display:inline-block;
+}
+
+.card {
+    display:inline-block;
+    background: #fff;
+    padding: 1em;
+    margin: 0 0 1.5em;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+}
+.card:hover {
+    box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2);
+}
+.card-links{
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/*Footer
+****************************************************/
+footer{
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+footer a:hover{
+  text-decoration: none;
+}
+footer a{
+  font-size: 30px;
+}
+.contact-info a{
+  padding: 10px;
+}
+
+
+/*Media Queries - This is where respnsive behavior is planned for work
+**********************************************************************/
+@media (max-width:375px) {
+    .masonry {
+        column-count: 1;
+    }
+}
+
+@media (min-width:376px) and (max-width:768px) {
+    .masonry {
+        column-count: 2;
+    }
+}
+
+@media (min-width:1024px) {
+    .masonry {
+        column-count: 3;
+    }
+}
+
+
+/*Media Queries - This is where respnsive behavior is planned
+************************************************************/
+@media (min-width: 768px) {
+  .col-narrow {
+    width: 30%;
+    float: left;
+  }
+  .col-wide {
+    width: 70%;
+    float: left;
+    padding-left: 20px;
+  }
+  .profile-img{
+    width:200px;
+  }
+}
+
+@media (max-width: 767px){
+  header {
+    text-align: center;
+    padding-top: 180px;
+  }
+  .profile-img {
+    width: 150px;
+    display: block;
+    margin: auto;
+  }
+  .content-wrap-me{
+    padding-top: 50px;
+    padding-bottom: 0;
+  }
+  .content-wrap-about{
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .center-align{
+    text-align: center;
+    font-size: 20px;
+  }
+}

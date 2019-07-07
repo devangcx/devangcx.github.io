@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
+
+  <title>Residence</title>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/projects.css">
+  <script type="text/javascript" src="js/main.js"></script>
+  <script src="bootstrap/js/jquery.slim.min.js"></script>
+  <script src="bootstrap/js/tether.min.js"></script>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+  <script src="bootstrap/js/scripts.js"></script>
+  <script>
+    (function(i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-102004765-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <h5 class="margin-top">Introduction</h5>
+    <p>The purpose of this page is to document the performance measurement and optimization process for a tenement in the city of Vadodara, India. This page is being updated as the modelling and analysis are being performed.</p>
+
+    <h5>Weather Data</h5>
+    <p> As per climate map of India, IGBC New Buildings, Vadodara falls under the category of <strong>hot-dry</strong> climate.</p>
+
+    <p>As a best practice, detailed weather data analysis is to be conducted before performing any simulations. Just by carefully looking at the weather data, the designer can make various inferences and contemplate climate responsive strategies.</p>
+
+    <p>Energyplus Weather files are de-facto industry standard in climate data and accepted by a wide variety of simulation tools. All the analysis for this project will be performed using the Ladybug Analysis tools which provides a toolkit of analysis and
+      simulations. Considering that, an EPW file for the location of Vadodara is required in order to perform preliminary climate analysis. However, such a file is not publicly available at the moment this page is being written. Therefore, the available
+      EPW file of Ahmedabad will be used throughout this project.</p>
+
+    <p>It is an industry practice to use the available EPW file for a location that has a climate quite similar to the climate of the location of interest. However, the frequently asked question is, "How close should the location of reference be?" According
+      to renowned building scientist Dr Christoph Reinhart, there's no general answer to this question. In the case of an area with a pronounced climate such as the San Francisco Bay area, just a few kilometres may already be too many. In other areas
+      of the world, the distance of dozens of kilometres still yields reliable results. In other words, some direct knowledge of local climate is always required when picking up a reference climate for further analysis. <a href="#link01">[1]</a></p>
+
+    <figure>
+      <img class="figure-img img-fluid" src="images/projects/residence/climate comparison.jpg" alt="climate comparison">
+      <p class="text-center figure-caption">Comparison of outdoor dry bulb temperature in Ahmedabad and Vadodara <a href="#link02">[2]</a></p>
+    </figure>
+
+    <p>Based on the review of the outdoor air dry bulb temperature profile for both the cities, it is assumed that the climate of Ahmedabad is a good enough approximation of the climate of Vadodara. And hence, the publicly available EPW for the city of Ahmedabad
+      will be used in all the analysis.</p>
+
+    <p>In any project, the designer must exhaustively analyze the weather data before moving to other simulations or making any design decisions. What follows is a series of weather analysis graphs.</p>
+
+    <h5>Degree Hours</h5>
+    <p>The image below shows the plot of the cooling degree hours and the heating degree hours. It is very easy to determine whether the building design shall be cooling oriented or it should be heating oriented by looking at this plot. Cooling degree hours
+      is the difference between the ambient air temperature and the set comfort temperature in degree Celsius multiplied by the number of hours such difference occurs. Heating degree hours are defined similarly. They are the difference between the set
+      comfort temperature and the ambient air temperature in degree Celsius multiplied by the number of hours such difference occurs.</p>
+    <figure>
+      <img class="figure-img img-fluid" src="images/projects/residence/degreeHours.jpg" alt="Degree Hours">
+      <p class="text-center figure-caption">Cooling Degree Hours and Heating Degree Hours</p>
+    </figure>
+    <p>Based on the plot above, it is clear that this is a cooling dominated climate and design strategies shall be employed accordingly.</p>
+
+    <h5>Psychrometric Chart</h5>
+    <p>A psychrometric chart is a tool often used to determine the baseline percentage of comfortable hours in a given climate. In this case, increase in the percentage of comfortable hours is plotted using polygons. A psychrometric chart is a tool used
+      to validate design strategies envisaged for a building in the given climate.</p>
+    <figure>
+      <img class="figure-img img-fluid" src="images/projects/residence/psy.jpg" alt="Psychrometric Chart">
+      <p class="text-center figure-caption">Deffirent design strategies and their contribution to the percentage of the time comfortable</p>
+    </figure>
+
+
+    <h5>Temperature and Humidity</h5>
+    <p>In a hot-dry climate, energy gain from the envelope will be prominent. Hence, it is imperative to analyze the outside air dry bulb temperature and relative humidity for their clear impact on thermal comfort.</p>
+
+    <figure>
+      <img class="figure-img img-fluid" src="images/projects/residence/temperature_humidity.jpg" alt="Temperature & Humidity">
+      <p class="text-center figure-caption">Annual outdoor air temperature and relative humidity</p>
+    </figure>
+
+
+    <p>The graphs mentioned above present the climate data. While this data certainly helps one in providing a clear picture of the climate of the place, what the designer is really interested in knowing is the periods of time during which an occupant can
+      be made thermally comfortable. In order to achieve that, the data presented above is checked against the Adaptive Comfort Model.</p>
+
+    <p>In adaptive comfort model, it is assumed that the users of a building will adapt to a wider range of thermal conditions if they are provided with the control to influence their thermal environment. It is also assumed that the occupants in naturally
+      ventilated buildings tend to adapt to the mean monthly temperatures as long as the air temperature inside the building remained close to the mean monthly temperature. This condition is true as long as the mean monthly temperature remains in the
+      range of 10C to 33C.</p>
+
+    <p>Typically, the air conditioning aims to thermally satisfy at least the 80% of the occupants. While the air conditioning controls the air temperature, the thermal comfort of an occupant is influenced by factors beyond the air temperature. Factors such
+      as; wind velocity, humidity, activity, metabolic rate and clothing contribute heavily to the thermal comfort of an occupant.</p>
+
+    <p>Following graph shows the time of the year during which an occupant will be thermally comfortable. As mentioned above, it is assumed that the building will maintain its indoor air temperature close to the monthly mean, and at least 1m/s of wind velocity
+      will be achieved either through natural ventilation or by use of fans.</p>
+
+    <figure>
+      <img class="figure-img img-fluid" src="images/projects/residence/adaptiveComfort.jpg" alt="Adaptive Comfort">
+      <p class="text-center figure-caption">Adaptive Comfort applied to indoor air temperature</p>
+    </figure>
+
+    <p>In order to take advantage of the natural ventilation, the prevailing wind direction and average wind speed from the prevailing wind direction shall be known. Following graphs show monthly prevailing wind directions.</p>
+
+    <figure>
+      <img class="figure-img img-fluid" src="images/projects/residence/windRoseAllMonths.jpg" alt="Wind Rose All Months">
+      <p class="text-center figure-caption">Monthly prevailing wind directions and velocities</p>
+    </figure>
+
+    <p>The psychrometric chart showed that when a good thermal mass and night-time ventilation is considered, there about 83% increase in the number of hours people feel comfortable from the baseline where not passive environmental strategies are envisaged.
+      Based on the personal experience of the author in this climate, during the harshest summer months, it is quite possible to night-purge through natural ventilation. The prominent wind direction for the same is of a primary interest to this study.</p>
+
+    <p>Following graph shows annual wind rose on the left and the wind rose showing prevailing wind direction and velocity during all the comfort hours identified by the comfort model and night-time hours (8 pm to 8 am) during the summer months.</p>
+
+    <figure>
+      <img class="figure-img img-fluid" src="images/projects/residence/windRose.jpg" alt="Wind Rose">
+      <p class="text-center figure-caption">Annual wind rose on the left and wind rose for comfortable hours on the right</p>
+    </figure>
+
+    <p>Based on the wind rose on the right, it is clear that throughout the year, at least 45% of the time, it is possible to naturally ventilate for thermal comfort.</p>
+
+
+    <h5 class="margin-top">Bibliography</h5>
+    <ol>
+      <li id="link01">Reinhart, Christoph. “The Source.” Daylighting Handbook, S.n., 2014.</li>
+      <li id="link02"> <a href="https://en.wikipedia.org/wiki/Vadodara#Climate">Vadodara dry bulb temperature</a>
+        <a href="https://www.timeanddate.com/weather/india/vadodara/climate">Ahmedabad drybulb temperature</a></li>
+    </ol>
+
+
+
+  </div>
+</body>
+
+</html>
