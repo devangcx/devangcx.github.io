@@ -21,5 +21,6 @@ function showSlides() {
 
 
 function resumePropmt(){
-  alert("Please email for a latest resume.");
+  alert("Thank you for your interest. Please email devang@outlook.in\
+ for a latest resume.");
 }
