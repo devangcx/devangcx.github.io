@@ -27,3 +27,7 @@ function resumePropmt() {
  for a latest copy of resume."
   );
 }
+
+// Coloring card names
+const cardNames = document.querySelectorAll("h4");
+console.log(cardNames);
