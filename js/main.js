@@ -1,4 +1,35 @@
-// Following is the script used in slideshow only
+// Resume prompt
+function resumePropmt() {
+  alert(
+    "Thank you for your interest. Please email devang@outlook.in\
+ for a latest copy of resume."
+  );
+}
+
+// Get the number of slides
+const slideContainer = document.querySelector(".slideshow-container").children;
+const numOfSlides = function (slideContainer) {
+  let numOfSlides = 0;
+  for (i = 0; i < slideContainer.length; i++) {
+    if (slideContainer[i].className == "mySlides fade") {
+      numOfSlides++;
+    }
+  }
+  return numOfSlides;
+};
+
+// Add dots
+const dots = document.getElementById("dots");
+const dotElement = `<span class="dot"></span>`;
+
+const addDots = function (numOfSlides) {
+  for (i = 0; i < numOfSlides; i++) {
+    dots.innerHTML += dotElement;
+  }
+};
+addDots(numOfSlides(slideContainer));
+
+// Simulate a slide show
 var slideIndex = 0;
 showSlides();
 
@@ -21,13 +52,18 @@ function showSlides() {
   setTimeout(showSlides, 5000); // Change image every 2 seconds
 }
 
-function resumePropmt() {
-  alert(
-    "Thank you for your interest. Please email devang@outlook.in\
- for a latest copy of resume."
-  );
-}
-
-// Coloring card names
-const cardNames = document.querySelectorAll("h4");
-console.log(cardNames);
+// Highlight card text
+const h4s = document.getElementsByTagName("h4");
+console.log(h4s.length);
+const applyHighlight = function () {
+  cardsToHighlight = ["Workflow Repository", "Internal Website", "View Script"];
+  for (i = 0; i < h4s.length; i++) {
+    console.log("Outer text", h4s[i].lastElementChild.outerText);
+    if (cardsToHighlight.includes(h4s[i].lastElementChild.outerText)) {
+      h4s[i].style.cssText =
+        "text-decoration:none; border-bottom: 5px solid #ee233c;";
+    }
+  }
+};
+applyHighlight();
+console.log("I am here");
