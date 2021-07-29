@@ -52,18 +52,17 @@ function showSlides() {
   setTimeout(showSlides, 5000); // Change image every 2 seconds
 }
 
-// Highlight card text
-const h4s = document.getElementsByTagName("h4");
-console.log(h4s.length);
-const applyHighlight = function () {
-  cardsToHighlight = ["Workflow Repository", "Internal Website", "View Script"];
-  for (i = 0; i < h4s.length; i++) {
-    console.log("Outer text", h4s[i].lastElementChild.outerText);
-    if (cardsToHighlight.includes(h4s[i].lastElementChild.outerText)) {
-      h4s[i].style.cssText =
-        "text-decoration:none; border-bottom: 5px solid #ee233c;";
-    }
-  }
-};
-applyHighlight();
-console.log("I am here");
+// Highlight card text if they match certain names
+// document.addEventListener("DOMContentLoaded", function (e) {
+//   const h4s = document.getElementsByClassName("cards");
+//   console.log("Length", h4s.length);
+//   cardsToHighlight = ["Workflow Repository", "Internal Website", "View Script"];
+//   for (i = 0; i < h4s.length; i++) {
+//     console.log("Outer text", h4s[i].lastElementChild.outerText);
+//     if (cardsToHighlight.includes(h4s[i].lastElementChild.outerText)) {
+//       h4s[i].style.cssText =
+//         "text-decoration:none; border-bottom: 5px solid #ee233c;";
+//     }
+//   }
+// });
+// console.log("I am here");
