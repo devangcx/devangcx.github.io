@@ -18,13 +18,13 @@ const numOfSlides = function (slideContainer) {
   return numOfSlides;
 };
 
-// Add dots
+// Add dots based on the number of slides
 const dots = document.getElementById("dots");
-const dotElement = `<span class="dot"></span>`;
-
 const addDots = function (numOfSlides) {
   for (i = 0; i < numOfSlides; i++) {
-    dots.innerHTML += dotElement;
+    let dotElement = document.createElement("span");
+    dotElement.classList.add("dot");
+    dots.appendChild(dotElement);
   }
 };
 addDots(numOfSlides(slideContainer));
