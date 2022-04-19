@@ -72,4 +72,4 @@ function highlightCards(cards) {
     }
   });
 }
-highlightCards(cardsToHighlight);
+// highlightCards(cardsToHighlight);
