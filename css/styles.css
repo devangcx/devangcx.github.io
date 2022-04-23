@@ -228,6 +228,7 @@ header.i {
   margin: 0 auto;
   padding: 250px 50px;
   overflow: auto;
+  height: 100vh;
 }
 
 
@@ -236,7 +237,7 @@ header.i {
 .About-me{
   background: white;
   background-size: cover;
-  background-position:
+  height: 100vh;
 }
 .content-wrap-about{
   max-width: 950px;
