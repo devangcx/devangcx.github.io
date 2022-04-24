@@ -13,7 +13,7 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat|News+Cycle" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css" />
   <script src="https://use.fontawesome.com/6cf450c119.js"></script>
-  <script type="text/javascript" src="js/main.js" defer></script>
+  <script type="module" src="js/main.js" defer></script>
 
   <script>
     (function(i, s, o, g, r, a, m) {
@@ -54,7 +54,7 @@
     <div class="col-wide">
       <h1 class="center-align">Devang Chauhan</h1>
       <h2 class="center-align">Software Developer</h2>
-      <p>A software developer with background in design, project management and consulting.</p>
+      <p>A software developer with background in design, project management and sustainability consulting.</p>
     </div>
   </div>
 
@@ -94,11 +94,11 @@
     <!-- Work -->
     <section id="work" class="work">
       <div class="content-wrap">
-        <div class="masonry">
+        <div class="masonry" id="masonry">
 
 
           <!-- HOKware -->
-          <div id="hokware" class="card">
+          <div id="hokWare" class="card">
             <a href="hokware.html" target="_blank" class="card-links">
               <img src="images/thumbnails/hok.jpg" alt="HOKware" style="width:100%">
               <div class="container">
@@ -110,7 +110,7 @@
 
 
           <!-- MSA Central-->
-          <div id="msacentral" class="card">
+          <div id="msaCentral" class="card">
             <a href="central.html" target="_blank" class="card-links">
               <img src="images/thumbnails/msa.jpg" alt="HOKware" style="width:100%">
               <div class="container">
@@ -122,7 +122,7 @@
 
 
           <!-- View Analysis -->
-          <div id="viewanalysis" class="card">
+          <div id="viewAnalysis" class="card">
             <a href="docs/view analysis.pdf" target="_blank" class="card-links">
               <img src="images/thumbnails/view script.jpg" alt="View Analysis" style="width:100%">
               <div class="container">
@@ -134,7 +134,7 @@
 
 
           <!-- Site Analysis -->
-          <div class="card">
+          <div id="siteAnalysis" class="card">
             <a href="docs/Site Analysis.pdf" target="_blank" class="card-links">
               <img src="images/thumbnails/site analysis.jpg" alt="Site Analysis" style="width:100%">
               <div class="container">
@@ -146,7 +146,7 @@
 
 
           <!-- Outdoor Comfort -->
-          <div class="card">
+          <div id="outdoorComfort" class="card">
             <a href="docs/CFD+Comfort.pdf" target="_blank" class="card-links">
               <img src="images/thumbnails/CFD+Comfort.jpg" alt="Site Analysis" style="width:100%">
               <div class="container">
@@ -158,7 +158,7 @@
 
 
           <!-- UTCI -->
-          <div class="card">
+          <div id="utci" class="card">
             <a href="docs/UTCI.pdf" target="_blank" class="card-links">
               <img src="images/thumbnails/utci.jpg" alt="UTCI" style="width:100%">
               <div class="container">
@@ -170,7 +170,7 @@
 
 
           <!-- Facade Optimization -->
-          <div class="card">
+          <div id="facadeOptimization" class="card">
             <a href="facade_optimization.html" target="_blank" class="card-links">
               <img src="images/thumbnails/optimized facade.jpg" alt="optimization" style="width:100%">
               <div class="container">
@@ -182,7 +182,7 @@
 
 
           <!-- Code Patches -->
-          <div class="card">
+          <div id="searchComponent" class="card">
             <a href="https://discourse.ladybug.tools/t/ladybug-0-0-67-and-honeybee-0-0-64-release/4473?u=devang" target="_blank" class="card-links">
               <img src="images/thumbnails/ladybug search.png" alt="Ladybug Search" style="width:100%">
               <div class="container">
@@ -194,7 +194,7 @@
 
 
           <!-- Beaufort Scale -->
-          <div class="card">
+          <div id="beaufortScale" class="card">
             <a href="https://twitter.com/DevangGC/status/805704769943670784?s=20" target="_blank" class="card-links">
               <img src="images/thumbnails/beaufort.jpg" alt="Beaufort Scale" style="width:100%">
               <div class="container">
@@ -206,7 +206,7 @@
 
 
           <!-- First Mention of Development -->
-          <div class="card">
+          <div id="ladyugDeveloper" class="card">
             <a href="https://twitter.com/__Mostapha__/status/830905451025985536?s=20" target="_blank" class="card-links">
               <img src="images/thumbnails/contribution.jpg" alt="First Mention" style="width:100%">
               <div class="container">
@@ -219,7 +219,7 @@
 
 
           <!-- Discourse contributions -->
-          <div class="card">
+          <div id="discourse" class="card">
             <a href="https://discourse.ladybug.tools/u/devang/summary" target="_blank" class="card-links">
               <img src="images/thumbnails/discourse.png" alt="Discourse Forum" style="width:100%">
               <div class="container">
@@ -231,7 +231,7 @@
 
 
           <!-- Energy Balance -->
-          <div class="card">
+          <div id="energyBalance" class="card">
             <a href="docs/energy.pdf" target="_blank" class="card-links">
               <img src="images/thumbnails/energybalance.jpg" alt="Energy Balance" style="width:100%">
               <div class="container">
@@ -242,20 +242,8 @@
           </div>
 
 
-          <!-- Residence -->
-          <div class="card">
-            <a href="residence.html" target="_blank" class="card-links">
-              <img src="images/thumbnails/hotSuns.jpg" alt="Residence" style="width:100%">
-              <div class="container">
-                <h4><b>Residence</b></h4>
-                <p class="topLess">A full set of simulations set for a bunglow</p>
-              </div>
-            </a>
-          </div>
-
-
           <!-- LEED V4 Daylight -->
-          <div class="card">
+          <div id="leedv4" class="card">
             <a href="docs/LEED Daylight.pdf" target="_blank" class="card-links"> <img src="images/thumbnails/leed.png" alt="LEEDV4" style="width:100%">
               <div class="container">
                 <h4>LEED V4 Daylight Credit</h4>
@@ -266,7 +254,7 @@
 
 
           <!-- Estidama Daylight -->
-          <div class="card">
+          <div id="estidamaDaylight" class="card">
             <a href="docs/Estidama Daylight.pdf" target="_blank" class="card-links"> <img src="images/thumbnails/estidama.jpg" alt="Estidama" style="width:100%">
               <div class="container">
                 <h4>Estidama Daylight Credit</h4>
@@ -277,7 +265,7 @@
 
 
           <!-- EPW Modification -->
-          <div class="card">
+          <div id="epwModification" class="card">
             <a href="docs/EPW Modify Tutorial.pdf" target="_blank" class="card-links"> <img src="images/thumbnails/energyplus.png" alt="EPW" style="width:100%">
               <div class="container">
                 <h4>EPW Modification</h4>
@@ -288,7 +276,7 @@
 
 
           <!-- Sunpath Introduction -->
-          <div class="card">
+          <div id="sunpathApp" class="card">
             <a href="https://docs.google.com/presentation/d/1tAGtkWfKFT26t_L34UWXkzZmrzH-cWQJdbZDk1vjjpg/edit" target="_blank" class="card-links"> <img src="images/thumbnails/sunpathIntro.jpg" alt="Sunpath Introduction" style="width:100%">
               <div class="container">
                 <h4>Sun-path Introduction</h4>
@@ -297,20 +285,8 @@
             </a>
           </div>
 
-
-          <!-- Sunpath Possibilities -->
-          <div class="card">
-            <a href="https://docs.google.com/presentation/d/1b9ouQB376V_DfURt743P1-koXAsS8gjE1ZUPKjmgmzw/edit" target="_blank" class="card-links"> <img src="images/thumbnails/sunpathPossibilities.jpg" alt="Sunpath Possibilities" style="width:100%">
-              <div class="container">
-                <h4>Sun-path Possibilities</h4>
-                <p class="topLess">A presentation on possible uses of sun-path in early stage design stage. The second in a series of presentations on building science.</p>
-              </div>
-            </a>
-          </div>
-
-
           <!-- Building Performance Simulation -->
-          <div class="card">
+          <div id="buildingPerformanceSimulation" class="card">
             <a href="docs/Building Performance Simulation.pdf" target="_blank" class="card-links"> <img src="images/thumbnails/buildingPerformanceSimulation.jpg" alt="Simulations" style="width:100%">
               <div class="container">
                 <h4>Design Remediation with simulations</h4>
@@ -321,7 +297,7 @@
 
 
           <!-- Skirkanich Hall -->
-          <div class="card">
+          <div id="skirkanichHall" class="card">
             <a href="docs/Skirkanich Hall.pdf" target="_blank" class="card-links"> <img src="images/thumbnails/skirkanichHall.jpg" alt="Skirkanich" style="width:100%">
               <div class="container">
                 <h4>Energy Model Calibration</h4>
@@ -332,7 +308,7 @@
 
 
           <!--Farnsworth House -->
-          <div class="card">
+          <div id="farnworthHouse" class="card">
             <a href="docs/Franswoth House.pdf" target="_blank" class="card-links"> <img src="images/thumbnails/farnsworthHouse.jpg" alt="Farnsworth" style="width:100%">
               <div class="container">
                 <h4>Farnsworth House</h4>
@@ -343,7 +319,7 @@
 
 
           <!--OIDC -->
-          <div class="card">
+          <div id="oidc" class="card">
             <a href="docs/OIDC.pdf" target="_blank" class="card-links"> <img src="images/thumbnails/oidc.jpg" alt="OIDC" style="width:100%">
               <div class="container">
                 <h4>Gated Community</h4>
@@ -354,7 +330,7 @@
 
 
           <!--Wind Park-->
-          <div class="card">
+          <div id="windPark" class="card">
             <a href="docs/Apartment.pdf" target="_blank" class="card-links"> <img src="images/thumbnails/apartment.jpg" alt="Wind Park" style="width:100%">
               <div class="container">
                 <h4>Luxury Apartments</h4>
@@ -365,7 +341,7 @@
 
 
           <!--Villa-->
-          <div class="card">
+          <div id="villa" class="card">
             <a href="docs/Villa.pdf" target="_blank" class="card-links"> <img src="images/thumbnails/villa.jpg" alt="Villa" style="width:100%">
               <div class="container">
                 <h4>Villa</h4>
@@ -376,7 +352,7 @@
 
 
           <!--Thesis-->
-          <div class="card">
+          <div id="thesis" class="card">
             <a href="docs/Academic Work.pdf" target="_blank" class="card-links"> <img src="images/thumbnails/thesis.jpg" alt="Thesis" style="width:100%">
               <div class="container">
                 <h4>Design Thesis</h4>
