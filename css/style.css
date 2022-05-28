@@ -1,0 +1,103 @@
+
+body, input, button{
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    margin: 0px;
+    text-align: center;
+}
+p{
+    text-align: left;
+}
+
+a{  
+    color: #ee233c;
+    text-decoration: none;
+    font-weight: 600;
+}
+a:hover{
+    text-decoration: none;
+}
+
+/* navbar */
+.nav-bar{
+    padding: 20px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+}
+.nav-link{
+    padding: 0px 10px;
+}
+
+/* header */
+/* .screen-center{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+} */
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    
+}
+
+.profile-img{
+    width: 200px;
+    border-radius: 100%;
+}
+.title{
+    width: 400px;
+    padding-left: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.intro-text{
+    text-align: left;
+}
+
+@media screen and (max-width: 450px){
+    header{
+        flex-direction: column;
+        margin: 0px auto;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .title{
+        width: 300px;
+        margin: 0px auto;
+        padding-left: 0px;
+        align-items: center;
+    }
+}
+
+
+/* story */
+.story{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    width: 800px;
+    margin: 0px auto;
+    padding: 50px 0px;
+}
+@media screen and (max-width: 450px){
+    .story{
+        width: 300px;
+        padding: 0px;
+    }
+}
+    
+}
