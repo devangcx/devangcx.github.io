@@ -4,9 +4,10 @@ body, input, button{
 }
 
 body{
-    margin: 0px;
+    margin: 0px auto;
     text-align: center;
 }
+
 p{
     text-align: left;
     line-height: 1.5em;
@@ -27,6 +28,15 @@ a:hover{
 
 
 /* navbar */
+.nav-container{
+    max-width: 800px;
+    margin: 0px auto;
+    padding: 0px 1em;
+    border: 1px dotted cyan;
+    display: flex;
+    justify-content: center;
+}
+
 .nav-bar{
     margin: 0px auto;
     padding: 1em;
@@ -34,7 +44,9 @@ a:hover{
     justify-content: center;
     align-items: center;
     position: fixed;
+    top: 0;
     background-color: #fff;
+    max-width: 800px;
 }
 .nav-link{
     padding: 0px 10px;
@@ -48,6 +60,9 @@ header{
     align-items: center;
     text-align: center;
     min-height: 100vh;
+    max-width: 800px;
+    margin: 0px auto;
+    padding: 0 1em;
     border: 2px solid red;
     
 }
@@ -76,14 +91,11 @@ section{
 .container{
     max-width: 800px;
     margin: 0px auto;
-    padding: 0px 1em;
+    padding: 2em 1em;
     border: 1px dotted orange;
     display: flex;
     justify-content: center;
 }
-
-
-
 
 /* story */
 .story{
@@ -93,12 +105,12 @@ section{
     align-items: center;
 }
 
-
+/* Remove this min-width here to inherit values from this media query to the
+one after it */
 @media (max-width: 450px) and (min-width: 360px){
 
     header{
         flex-direction: column;
-        margin: 0px auto;
     }
 
     .title{
@@ -116,9 +128,9 @@ section{
     
 
 @media (max-width: 359px){
+
     header{
         flex-direction: column;
-        padding: 5em 0;
     }
 
     .title{
@@ -130,12 +142,12 @@ section{
 
     .container{
         max-width: 280px;
+        padding: 5em 1em;
     }
 
     .profile-img{
-        margin-top: 3em;
+        width: 60%;
     }
-
     .nav-bar{
         flex-wrap: wrap;
         justify-content: space-evenly;
