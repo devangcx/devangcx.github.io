@@ -9,6 +9,11 @@ body{
 }
 p{
     text-align: left;
+    line-height: 1.5em;
+}
+
+span{
+    font-weight: 600;
 }
 
 a{  
@@ -20,39 +25,35 @@ a:hover{
     text-decoration: none;
 }
 
+
 /* navbar */
 .nav-bar{
-    padding: 20px 0px;
+    margin: 0px auto;
+    padding: 1em;
     display: flex;
     justify-content: center;
     align-items: center;
     position: fixed;
-    width: 100%;
     background-color: #fff;
 }
 .nav-link{
     padding: 0px 10px;
 }
 
-/* header */
-/* .screen-center{
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-} */
 
+/* header */
 header{
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     min-height: 100vh;
+    border: 2px solid red;
     
 }
 
 .profile-img{
-    width: 200px;
+    max-width: 200px;
     border-radius: 100%;
 }
 .title{
@@ -61,26 +62,27 @@ header{
     display: flex;
     flex-direction: column;
     align-items: start;
+    border: 1px solid blue;
 }
 .intro-text{
     text-align: left;
 }
 
-@media screen and (max-width: 450px){
-    header{
-        flex-direction: column;
-        margin: 0px auto;
-    }
+/* sections */
+section{
+    min-height: 100vh;
 }
 
-@media screen and (max-width: 450px){
-    .title{
-        width: 300px;
-        margin: 0px auto;
-        padding-left: 0px;
-        align-items: center;
-    }
+.container{
+    max-width: 800px;
+    margin: 0px auto;
+    padding: 0px 1em;
+    border: 1px dotted orange;
+    display: flex;
+    justify-content: center;
 }
+
+
 
 
 /* story */
@@ -88,16 +90,58 @@ header{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: start;
-    width: 800px;
-    margin: 0px auto;
-    padding: 50px 0px;
+    align-items: center;
 }
-@media screen and (max-width: 450px){
-    .story{
-        width: 300px;
-        padding: 0px;
+
+
+@media (max-width: 450px) and (min-width: 360px){
+
+    header{
+        flex-direction: column;
+        margin: 0px auto;
     }
+
+    .title{
+        max-width: 100%;
+        margin: 0px auto;
+        padding-left: 0px;
+        align-items: center;
+    }
+
+    .container{
+        max-width: 360px;
+    }
+
 }
     
+
+@media (max-width: 359px){
+    header{
+        flex-direction: column;
+        padding: 5em 0;
+    }
+
+    .title{
+        max-width: 100%;
+        margin: 0px auto;
+        padding-left: 0px;
+        align-items: center;
+    }
+
+    .container{
+        max-width: 280px;
+    }
+
+    .profile-img{
+        margin-top: 3em;
+    }
+
+    .nav-bar{
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .nav-link{
+        margin: 0.5em 0px;
+    }
 }
