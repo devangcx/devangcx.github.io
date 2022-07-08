@@ -1,51 +1,47 @@
-
-body, input, button{
+body,
+input,
+button {
     font-family: 'Montserrat', sans-serif;
 }
 
-body{
+body {
     margin: 0px auto;
     text-align: center;
 }
 
-p{
+p {
     text-align: left;
     line-height: 1.5em;
 }
 
-span{
+span {
     font-weight: 600;
 }
 
-a{  
+a {
     color: #ee233c;
     text-decoration: none;
     font-weight: 600;
 }
 
-a:hover{
+a:hover {
     text-decoration: none;
 }
 
-
-/* container width */
-.nav-container,
-.nav-bar,
-header,
-.container{
+.container {
     max-width: 800px;
+    margin: 0px auto;
 }
 
 
-
 /* navbar */
-.nav-container{
-    margin: 0px auto;
+.nav-container {
     display: flex;
     justify-content: center;
 }
 
-.nav-bar{
+.nav-bar {
+    width: 100vw;
     margin: 0px auto;
     padding: 1em;
     display: flex;
@@ -56,98 +52,130 @@ header,
     background-color: #fff;
 }
 
-.nav-link{
+.nav-link {
     padding: 0px 10px;
 }
 
 
 /* header */
-header{
+header {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     min-height: 100vh;
-    margin: 0px auto;
     padding: 0 1em;
 }
 
-.profile-img{
+.profile-img {
     max-width: 200px;
     border-radius: 100%;
 }
-.title{
-    width: 400px;
-    padding-left: 100px;
+
+.title {
     display: flex;
     flex-direction: column;
     align-items: start;
+    max-width: 400px;
+    padding-left: 6em;
+    /* border: 1px solid red; */
 }
 
-.intro-text{
+.intro-text {
     text-align: left;
 }
 
 /* sections */
-section{
+section {
     min-height: 100vh;
 }
 
-.container{
-    margin: 0px auto;
-    padding: 2em 1em;
-    border: 1px dotted orange;
-    display: flex;
-    justify-content: center;
-}
+
 
 /* story */
-.story{
+.story {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
+
+
 }
 
+/* .carousel {
+    min-height: 100vth;
+    border: 1px solid red;
+    flex-direction: column;
+}
 
-/* All mobile screens */
-@media (max-width: 450px){
+.carousel-item img {
+    max-width: 100%;
+} */
 
-    header{
+/* i-pads */
+@media (max-width: 950px) {
+    .container {
+        max-width: 750px;
+    }
+}
+
+/* surface-pro */
+@media (max-width: 550px) {
+
+    header {
         flex-direction: column;
     }
 
-    .title{
-        max-width: 100%;
-        margin: 0px auto;
-        padding-left: 0px;
+    .title {
         align-items: center;
+        justify-content: center;
+        padding: 0px;
     }
 
-    .container{
+    .intro-text {
+        text-align: center;
+    }
+
+    .container {
+        max-width: 500px;
+
+    }
+}
+
+/* All mobile screens */
+@media (max-width: 450px) {
+    .container {
         max-width: 360px;
     }
 
-}
-    
-/* Galaxy Fold */
-@media (max-width: 359px){
-
-    .container{
-        max-width: 280px;
-        padding: 5em 1em;
+    section {
+        padding: 2.5em 1em;
     }
 
-    .profile-img{
+}
+
+/* Galaxy Fold */
+@media (max-width: 359px) {
+
+    .container {
+        max-width: 280px;
+    }
+
+    section {
+        padding: 6em 1em;
+    }
+
+    .profile-img {
         width: 60%;
     }
 
-    .nav-bar{
+    .nav-bar {
         flex-wrap: wrap;
         justify-content: space-evenly;
     }
 
-    .nav-link{
+    .nav-link {
         margin: 0.5em 0px;
     }
 }
