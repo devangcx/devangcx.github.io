@@ -22,17 +22,25 @@ a{
     text-decoration: none;
     font-weight: 600;
 }
+
 a:hover{
     text-decoration: none;
 }
 
 
+/* container width */
+.nav-container,
+.nav-bar,
+header,
+.container{
+    max-width: 800px;
+}
+
+
+
 /* navbar */
 .nav-container{
-    max-width: 800px;
     margin: 0px auto;
-    padding: 0px 1em;
-    border: 1px dotted cyan;
     display: flex;
     justify-content: center;
 }
@@ -46,8 +54,8 @@ a:hover{
     position: fixed;
     top: 0;
     background-color: #fff;
-    max-width: 800px;
 }
+
 .nav-link{
     padding: 0px 10px;
 }
@@ -60,11 +68,8 @@ header{
     align-items: center;
     text-align: center;
     min-height: 100vh;
-    max-width: 800px;
     margin: 0px auto;
     padding: 0 1em;
-    border: 2px solid red;
-    
 }
 
 .profile-img{
@@ -77,8 +82,8 @@ header{
     display: flex;
     flex-direction: column;
     align-items: start;
-    border: 1px solid blue;
 }
+
 .intro-text{
     text-align: left;
 }
@@ -89,7 +94,6 @@ section{
 }
 
 .container{
-    max-width: 800px;
     margin: 0px auto;
     padding: 2em 1em;
     border: 1px dotted orange;
@@ -105,9 +109,9 @@ section{
     align-items: center;
 }
 
-/* Remove this min-width here to inherit values from this media query to the
-one after it */
-@media (max-width: 450px) and (min-width: 360px){
+
+/* All mobile screens */
+@media (max-width: 450px){
 
     header{
         flex-direction: column;
@@ -126,19 +130,8 @@ one after it */
 
 }
     
-
+/* Galaxy Fold */
 @media (max-width: 359px){
-
-    header{
-        flex-direction: column;
-    }
-
-    .title{
-        max-width: 100%;
-        margin: 0px auto;
-        padding-left: 0px;
-        align-items: center;
-    }
 
     .container{
         max-width: 280px;
@@ -148,6 +141,7 @@ one after it */
     .profile-img{
         width: 60%;
     }
+
     .nav-bar{
         flex-wrap: wrap;
         justify-content: space-evenly;
