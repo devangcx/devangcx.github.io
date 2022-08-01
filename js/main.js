@@ -1,8 +1,8 @@
 
     
-const appBtn = document.getElementById("apps-btn")
-const workEl = document.getElementById("work")
-const workBtn = document.getElementById("work-btn")
+const appBtn = document.getElementById("apps-btn");
+const workEl = document.getElementById("work");
+const workBtn = document.getElementById("work-btn");
 
 appBtn.addEventListener("click", function () {
     for (let i = 0; i < workEl.children.length; i++) {
