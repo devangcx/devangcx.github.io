@@ -49,8 +49,7 @@
         <div class="nav-links-container">
           <nav>
             <a class="nav-link" href="#about">About</a>
-            <button id="work-btn">Work</button>
-            <button id="apps-btn">Apps</button>
+            <a class="nav-link" href="#work">Work</a>
             <a class="nav-link" href="#contact">Connect</a>
           </nav>
         </div>
@@ -119,7 +118,20 @@
 
       <section id="work" class="work container">
 
-        <div id="sunpathApp" class="card app">
+
+        <div class="work-nav">
+          <button class="nav-link" id="all-btn">All</button>
+          <button class="nav-link" id="tech-btn">Tech</button>
+          <button class="nav-link" id="support-btn">Support</button>
+          <button class="nav-link" id="analysis-btn">Analysis</button>
+          <button class="nav-link" id="buildings-btn">Buildings</button>
+          <button class="nav-link" id="design-btn">Design</button>
+        </div>
+
+
+
+
+        <div id="sunpathApp" class="card tech">
           <div class="card-description">
             <h4>Sun-path app</h4>
             <p class="topLess">A web app to see how the sun moves at a certain
@@ -132,7 +144,7 @@
         </div>
 
 
-        <div id="weatherApp" class="card app">
+        <div id="weatherApp" class="card tech">
           <div class="card-description">
             <h4>EPW weather app</h4>
             <p class="topLess">A web app to visualize weather data
@@ -146,7 +158,7 @@
         </div>
 
 
-        <div id="outdoorComfortApp" class="card app">
+        <div id="outdoorComfortApp" class="card tech">
           <div class="card-description">
             <h4>Outdoor comfort app</h4>
             <p class="topLess">A web app to visualize the outdoor
@@ -160,7 +172,7 @@
         </div>
 
 
-        <div id="ladybugCharts" class="card">
+        <div id="ladybugCharts" class="card tech">
           <div class="card-description">
             <h4>ladybug-charts</h4>
             <p class="topLess">A library to create interactive data plots
@@ -175,7 +187,7 @@
         </div>
 
 
-        <div id="ladybugVtk" class="card">
+        <div id="ladybugVtk" class="card tech">
           <div class="card-description">
             <h4>ladybug-vtk</h4>
             <p class="topLess">A python library to create a 3D representation of
@@ -190,7 +202,7 @@
         </div>
 
 
-        <div id="honeybeeVtk" class="card">
+        <div id="honeybeeVtk" class="card tech">
           <div class="card-description">
             <h4>honeybee-vtk</h4>
             <p class="topLess">A python package to translate GBs worth of
@@ -204,7 +216,7 @@
         </div>
 
 
-        <div id="honeybee3dm" class="card">
+        <div id="honeybee3dm" class="card tech">
           <div class="card-description">
             <h4>honeybee-3dm</h4>
             <p class="topLess">A python package to turn rhino objects into
@@ -219,7 +231,7 @@
         </div>
 
 
-        <div id="hokWare" class="card">
+        <div id="hokWare" class="card tech">
           <div class="card-description">
             <h4><b>Workflow Repository</b></h4>
             <p class="topLess">A serverless dynamic content loading platform</p>
@@ -230,7 +242,7 @@
         </div>
 
 
-        <div id="viewAnalysis" class="card">
+        <div id="viewAnalysis" class="card analysis">
           <div class="card-description">
             <h4><b>View Script</b></h4>
             <p class="topLess">From a sketch to a script for measuring views
@@ -244,7 +256,7 @@
         </div>
 
 
-        <div id="msaCentral" class="card">
+        <div id="msaCentral" class="card tech">
           <div class="card-description">
             <h4><b>Internal Website</b></h4>
             <p class="topLess">A internal website to publish firmwide updates
@@ -258,7 +270,7 @@
         </div>
 
 
-        <div id="siteAnalysis" class="card">
+        <div id="siteAnalysis" class="card analysis">
           <div class="card-description">
             <h4><b>Preliminary Studies</b></h4>
             <p class="topLess">Early stage site studies</p>
@@ -269,7 +281,7 @@
         </div>
 
 
-        <div id="outdoorComfort" class="card">
+        <div id="outdoorComfort" class="card analysis">
           <div class="card-description">
             <h4><b>Outdoor Comfort</b></h4>
             <p class="topLess">Extensive outdoor comfort studies involving CFD</p>
@@ -280,7 +292,7 @@
         </div>
 
 
-        <div id="facadeOptimization" class="card">
+        <div id="facadeOptimization" class="card analysis">
           <div class="card-description">
             <h4><b>Facade Optimization</b></h4>
             <p class="topLess">Parametric optimization for ideal aperture size</p>
@@ -291,7 +303,7 @@
             alt="optimization">
         </div>
 
-        <div id="searchComponent" class="card">
+        <div id="searchComponent" class="card tech">
           <div class="card-description">
             <h4><b>Search Component</b></h4>
             <p class="topLess">Addition of the Ladybug Universal Search
@@ -304,7 +316,7 @@
             alt="Ladybug Search">
         </div>
 
-        <div id="beaufortScale" class="card">
+        <div id="beaufortScale" class="card tech">
           <div class="card-description">
             <h4><b>Beaufort Scale</b></h4>
             <p class="topLess">Addition of the Beaufort Scale to the Ladybug
@@ -317,7 +329,7 @@
             alt="Beaufort Scale">
         </div>
 
-        <div id="ladyugDeveloper" class="card">
+        <div id="ladyugDeveloper" class="card tech">
           <div class="card-description">
             <h4><b>Ladybug Developer</b></h4>
             <p class="topLess">First acknowledgement of my contributions to
@@ -330,7 +342,7 @@
             alt="First Mention">
         </div>
 
-        <div id="discourse" class="card">
+        <div id="discourse" class="card support">
           <div class="card-description">
             <h4><b>User Support</b></h4>
             <p class="topLess">One of the major user supporters on the Ladybug
@@ -342,7 +354,7 @@
             alt="Discourse Forum">
         </div>
 
-        <div id="energyBalance" class="card">
+        <div id="energyBalance" class="card analysis">
           <div class="card-description">
             <h4><b>Energy Balance</b></h4>
             <p class="topLess">Early Stage Energy Modelling</p>
@@ -352,7 +364,7 @@
             alt="Energy Balance">
         </div>
 
-        <div id="leedv4" class="card">
+        <div id="leedv4" class="card analysis">
           <div class="card-description">
             <h4>LEED V4 Daylight Credit</h4>
             <p class="topLess">Compliance documentation for LEED V4 daylight
@@ -362,7 +374,7 @@
           <img src="images/thumbnails/leed.png" class="card-img" alt="LEEDV4">
         </div>
 
-        <div id="estidamaDaylight" class="card">
+        <div id="estidamaDaylight" class="card analysis">
           <div class="card-description">
             <h4>Estidama Daylight Credit</h4>
             <p class="topLess">Compliance check for Estidama daylight credit</p>
@@ -373,7 +385,7 @@
             alt="Estidama">
         </div>
 
-        <div id="epwModification" class="card">
+        <div id="epwModification" class="card support">
           <div class="card-description">
             <h4>EPW Modification</h4>
             <p class="topLess">A tutorial for editing an EnergyPlus Weather
@@ -385,7 +397,7 @@
             alt="EPW">
         </div>
 
-        <div id="buildingPerformanceSimulation" class="card">
+        <div id="buildingPerformanceSimulation" class="card analysis">
           <div class="card-description">
             <h4>Design Remediation with simulations</h4>
             <p class="topLess">Environmental analysis as a tool for building
@@ -398,7 +410,7 @@
             alt="Simulations" class="card-img">
         </div>
 
-        <div id="skirkanichHall" class="card">
+        <div id="skirkanichHall" class="card analysis">
           <div class="card-description">
             <h4>Energy Model Calibration</h4>
             <p class="topLess">Using metered data on a real building to
@@ -410,7 +422,7 @@
             alt="Skirkanich">
         </div>
 
-        <div id="farnworthHouse" class="card">
+        <div id="farnworthHouse" class="card analysis">
           <div class="card-description">
             <h4>Farnsworth House</h4>
             <p class="topLess">Energy simulation as a tool for selecting Glass</p>
@@ -421,7 +433,7 @@
             alt="Farnsworth">
         </div>
 
-        <div id="oidc" class="card">
+        <div id="oidc" class="card building">
           <div class="card-description">
             <h4>Gated Community</h4>
             <p class="topLess">Campus design for a gated community</p>
@@ -430,7 +442,7 @@
           <img src="images/thumbnails/oidc.jpg" class="card-img" alt="OIDC">
         </div>
 
-        <div id="windPark" class="card">
+        <div id="windPark" class="card building">
           <div class="card-description">
             <h4>Luxury Apartments</h4>
             <p class="topLess">Design for high-rise luxury apartments</p>
@@ -441,7 +453,7 @@
             Park">
         </div>
 
-        <div id="villa" class="card">
+        <div id="villa" class="card building">
           <div class="card-description">
             <h4>Villa</h4>
             <p class="topLess">Construction documents for a luxury villa</p>
@@ -450,7 +462,7 @@
           <img src="images/thumbnails/villa.jpg" class="card-img" alt="Villa">
         </div>
 
-        <div id="thesis" class="card">
+        <div id="thesis" class="card design">
           <div class="card-description">
             <h4>Design Thesis</h4>
             <p class="topLess">National Independence Museum</p>
