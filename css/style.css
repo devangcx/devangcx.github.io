@@ -13,7 +13,8 @@ p {
     line-height: 1.5em;
 }
 
-span {
+span,
+h4 {
     font-weight: 600;
 }
 
@@ -64,23 +65,15 @@ nav a:hover {
     text-decoration: none;
 }
 
-nav button {
-    background-color: white;
-    border: none;
-    color: #ee233c;
-    text-decoration: none;
-    font-size: inherit;
-    font-weight: 600;
-    cursor: pointer;
-}
 
 
 
 .name {
     font-size: 2rem;
     padding: 0.5em 0px;
-    color: black;
+    color: #ee233c;
     text-decoration: none;
+    font-weight: 700;
 }
 
 .nav-link {
@@ -135,6 +128,23 @@ nav button {
     align-items: start;
 }
 
+.work-nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2em;
+}
+
+.work-nav button {
+    background-color: white;
+    color: #ee233c;
+    border: none;
+    text-decoration: none;
+    font-size: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
 
 .card {
     width: 100%;
@@ -149,7 +159,7 @@ nav button {
 .card-img {
     width: 250px;
     object-fit: contain;
-    padding: 1em 0px 1em 0px;
+    padding-bottom: 1em;
 }
 
 
