@@ -8,7 +8,21 @@ const analysisBtn = document.getElementById("analysis-btn");
 const buildingBtn = document.getElementById("buildings-btn");
 const designBtn = document.getElementById("design-btn");
 
+const hideCards = function (className, parentEl) {
 
+    for (let i = 0; i < parentEl.children.length; i++){
+        cardEl = parentEl.children[i];
+        cardEl.style.display = "flex";
+    }
+
+    for (let i = 0; i < parentEl.children.length; i++) {
+        cardEl = parentEl.children[i];
+        if (cardEl.classList.contains(className) === false && cardEl.classList.contains("work-nav") === false)  {
+            cardEl.style.display = "none";
+        }
+    }
+    parentEl.scrollIntoView();
+};
 
 allBtn.addEventListener("click", function () {
     for (let i = 0; i < workEl.children.length; i++) {
@@ -20,83 +34,22 @@ allBtn.addEventListener("click", function () {
 });
 
 techBtn.addEventListener("click", function () {
-
-    for (let i = 0; i < workEl.children.length; i++){
-        cardEl = workEl.children[i];
-        cardEl.style.display = "flex";
-    }
-
-    for (let i = 0; i < workEl.children.length; i++) {
-        cardEl = workEl.children[i];
-        if (cardEl.classList.contains("tech") === false && cardEl.classList.contains("work-nav") === false)  {
-            cardEl.style.display = "none";
-        }
-    }
-    document.getElementById("work").scrollIntoView();
+    hideCards("tech", workEl);
 });
 
 supportBtn.addEventListener("click", function () {
-
-    for (let i = 0; i < workEl.children.length; i++){
-        cardEl = workEl.children[i];
-        cardEl.style.display = "flex";
-    }
-
-    for (let i = 0; i < workEl.children.length; i++) {
-        cardEl = workEl.children[i];
-        if (cardEl.classList.contains("support") === false && cardEl.classList.contains("work-nav") === false)  {
-            cardEl.style.display = "none";
-        }
-    }
-    document.getElementById("work").scrollIntoView();
+    hideCards("support", workEl);
 });
 
 analysisBtn.addEventListener("click", function () {
-
-    for (let i = 0; i < workEl.children.length; i++){
-        cardEl = workEl.children[i];
-        cardEl.style.display = "flex";
-    }
-
-    for (let i = 0; i < workEl.children.length; i++) {
-        cardEl = workEl.children[i];
-        if (cardEl.classList.contains("analysis") === false && cardEl.classList.contains("work-nav") === false)  {
-            cardEl.style.display = "none";
-        }
-    }
-    document.getElementById("work").scrollIntoView();
+    hideCards("analysis", workEl); 
 });
 
 buildingBtn.addEventListener("click", function () {
-
-    for (let i = 0; i < workEl.children.length; i++){
-        cardEl = workEl.children[i];
-        cardEl.style.display = "flex";
-    }
-
-    for (let i = 0; i < workEl.children.length; i++) {
-        cardEl = workEl.children[i];
-        if (cardEl.classList.contains("building") === false && cardEl.classList.contains("work-nav") === false)  {
-            cardEl.style.display = "none";
-        }
-    }
-    document.getElementById("work").scrollIntoView();
+    hideCards("building", workEl); 
 });
 
 designBtn.addEventListener("click", function () {
-
-    for (let i = 0; i < workEl.children.length; i++){
-        cardEl = workEl.children[i];
-        cardEl.style.display = "flex";
-    }
-
-    for (let i = 0; i < workEl.children.length; i++) {
-        cardEl = workEl.children[i];
-        if (cardEl.classList.contains("design") === false && cardEl.classList.contains("work-nav") === false)  {
-            cardEl.style.display = "none";
-        }
-    }
-    document.getElementById("work").scrollIntoView();
+    hideCards("design", workEl); 
 });
-
 
