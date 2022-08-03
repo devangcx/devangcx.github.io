@@ -171,6 +171,36 @@ nav a:hover {
     object-fit: scale-down;
 }
 
+/*----------footer---------- */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-links {
+    width: 100%;
+    display: flex;
+    justify-content: center
+}
+
+footer p {
+    margin: 0.5em 0px 0px 0px;
+    padding: 0px;
+}
+
+footer a {
+    padding: 0px 0.5em 0px 0.5em;
+    color: #ee233c;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+footer a:hover {
+    text-decoration: none;
+}
+
 
 @media (max-width: 1025px) {
     .container {
