@@ -288,7 +288,8 @@ footer a:hover {
     }
 
     .container {
-        max-width: 350px;
+        max-width: 450px;
+        padding: 0px 1em 0px 1em;
     }
 
     .about,
@@ -358,5 +359,10 @@ footer a:hover {
 
     .nav-link {
         margin: 0.5em 0px;
+    }
+
+    .card-img {
+        width: 125px;
+        height: 125px;
     }
 }
