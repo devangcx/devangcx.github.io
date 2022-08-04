@@ -2,6 +2,7 @@ body,
 input,
 button {
     font-family: 'Source Code Pro', monospace;
+    font-weight: 400;
 }
 
 body {
@@ -56,7 +57,7 @@ nav {
 nav a {
     color: #ee233c;
     text-decoration: none;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 nav a:hover {
@@ -68,7 +69,7 @@ nav a:hover {
     padding: 0.5em 0px;
     color: #ee233c;
     text-decoration: none;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .nav-link {
@@ -135,7 +136,7 @@ nav a:hover {
     border: none;
     text-decoration: none;
     font-size: inherit;
-    font-weight: 700;
+    font-weight: 600;
     cursor: pointer;
 }
 
