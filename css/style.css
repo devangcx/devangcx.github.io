@@ -3,6 +3,7 @@ input,
 button {
     font-family: 'Source Code Pro', monospace;
     font-weight: 400;
+    line-height: 1.5;
 }
 
 body {
@@ -11,7 +12,6 @@ body {
 
 p {
     text-align: left;
-    line-height: 1.5em;
 }
 
 span,
@@ -140,7 +140,7 @@ nav a:hover {
     cursor: pointer;
 }
 
-
+/*----------Cards---------- */
 .card {
     width: 100%;
     display: flex;
