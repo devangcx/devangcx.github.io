@@ -15,7 +15,7 @@ p {
 
 span,
 h4 {
-    font-weight: 600;
+    font-weight: 700;
 }
 
 section {
@@ -56,7 +56,7 @@ nav {
 nav a {
     color: #ee233c;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 nav a:hover {
@@ -135,7 +135,7 @@ nav a:hover {
     border: none;
     text-decoration: none;
     font-size: inherit;
-    font-weight: 600;
+    font-weight: 700;
     cursor: pointer;
 }
 
@@ -144,11 +144,13 @@ nav a:hover {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 0.5em;
 }
 
 .card-description {
     max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .card-description h4 {
@@ -327,7 +329,6 @@ footer a:hover {
     .card {
         align-items: center;
         margin-bottom: 2em;
-        ;
     }
 
     .card-img {
