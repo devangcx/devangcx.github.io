@@ -36,7 +36,8 @@ section {
     transition: 250ms;
 }
 
-.link:hover {
+.link:hover,
+.link:focus {
     transform: scale(1.2);
 }
 
@@ -173,6 +174,13 @@ nav a:hover {
     width: 200px;
     height: 200px;
     object-fit: scale-down;
+    transform: scale(1);
+    transition: 250ms;
+}
+
+.card-img:hover,
+.card-img:focus {
+    transform: scale(1.2);
 }
 
 /*----------footer---------- */
