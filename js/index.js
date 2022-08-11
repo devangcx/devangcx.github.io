@@ -14,36 +14,15 @@ const analysisBtn = document.getElementById("analysis-btn");
 const buildingBtn = document.getElementById("buildings-btn");
 const designBtn = document.getElementById("design-btn");
 
-
 // Load cards
-cardsEl.innerHTML += projects.map(function (project) {
-    return new Card(project).getHtml(); 
-}).join(' ');
-
+cardsEl.innerHTML = projects.map(project => new Card(project).getHtml()).join(' ');
 
 // Button actions
-allBtn.addEventListener("click", function () {
-    loadCards(cardsEl, workEl);
-});
-
-techBtn.addEventListener("click", function () {
-    hideCards("tech", cardsEl, workEl);
-});
-
-supportBtn.addEventListener("click", function () {
-    hideCards("support", cardsEl, workEl);
-});
-
-analysisBtn.addEventListener("click", function () {
-    hideCards("analysis", cardsEl, workEl); 
-});
-
-buildingBtn.addEventListener("click", function () {
-    hideCards("building", cardsEl, workEl); 
-});
-
-designBtn.addEventListener("click", function () {
-    hideCards("design", cardsEl, workEl); 
-});
+allBtn.addEventListener("click", () => loadCards(cardsEl, workEl));
+techBtn.addEventListener("click", () => hideCards("tech", cardsEl, workEl));
+supportBtn.addEventListener("click", () => hideCards("support", cardsEl, workEl));
+analysisBtn.addEventListener("click", () => hideCards("analysis", cardsEl, workEl));
+buildingBtn.addEventListener("click", () => hideCards("building", cardsEl, workEl));
+designBtn.addEventListener("click", () => hideCards("design", cardsEl, workEl));
 
 

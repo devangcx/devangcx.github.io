@@ -15,9 +15,10 @@ function hideCards(className, parentEl, scrollEl) {
 
     for (let i = 0; i < parentEl.children.length; i++) {
         const cardEl = parentEl.children[i];
-        if (cardEl.classList.contains(className) === false && cardEl.classList.contains("work-nav") === false)  {
-            cardEl.style.display = "none";
-        }
+        if (cardEl.classList.contains(className) === false &&
+            cardEl.classList.contains("work-nav") === false) {
+                cardEl.style.display = "none";
+            }
     }
 }
 
