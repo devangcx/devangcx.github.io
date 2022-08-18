@@ -1,10 +1,10 @@
-
-
-function Card(data) {
-    Object.assign(this, data);
-    const {title, description, link, thumbnail, alt, tag } = this;
-    this.getHtml = () =>
-        `
+class Card{
+    constructor(data) {
+        Object.assign(this, data);
+    }
+    getHtml(){
+        const { title, description, link, thumbnail, alt, tag } = this;
+        return `
             <div class="card ${tag}">
                 <div class="card-description">
                     <h4>${title}</h4>
@@ -15,7 +15,9 @@ function Card(data) {
                 </a>
             </div>
         `;
+    }
 }
+
 
 export default Card;
 
