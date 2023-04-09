@@ -1,0 +1,11 @@
+{
+    "include": [
+        "ts/*.ts"
+    ],
+    "compilerOptions": {
+        "target": "ES6",
+        "outDir": "js",
+        "allowJs": true,
+        "checkJs": true
+    }
+}
