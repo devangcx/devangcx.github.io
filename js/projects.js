@@ -1,3 +1,6 @@
+/**
+ * A list of objects representing the projects used on the website.
+ */
 const projects = [
     {
         title: `User manual`,
@@ -249,5 +252,4 @@ const projects = [
         tag: 'design'
     },
 ];
-
 export default projects;

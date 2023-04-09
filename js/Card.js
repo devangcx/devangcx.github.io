@@ -1,8 +1,22 @@
-class Card{
+/**
+ * The Card object.
+ */
+/**
+ * Create a Card object.
+ */
+class Card {
+    /**
+     * Create an instance of the Card object.
+     * @param data A Project object.
+     */
     constructor(data) {
         Object.assign(this, data);
     }
-    getHtml(){
+    /**
+     *
+     * @returns Get an HTML representation of the Card object as a string.
+     */
+    getHtml() {
         const { title, description, link, thumbnail, alt, tag } = this;
         return `
             <div class="card ${tag}">
@@ -17,8 +31,4 @@ class Card{
         `;
     }
 }
-
-
 export default Card;
-
-
