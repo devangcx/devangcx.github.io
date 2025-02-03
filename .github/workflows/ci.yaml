@@ -9,20 +9,25 @@ on:
     branches:
       - master
 
-
 jobs:
   deploy:
     name: Deploy to Github
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: set up node # we need node for for semantic release
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
-          node-version: 14.17
+          node-version: 20.15.0
       - name: install semantic-release
-        run: npm install semantic-release
+        run: npm install @semantic-release/exec
       - name: run semantic release
-        run: npx semantic-release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        id: new_release
+        run: |
+          nextRelease="`npx semantic-release@^17.0.0 --dryRun | grep -oP 'Published release \K.*? ' || true`"
+          npx semantic-release@^17.0.0
+          echo "::set-output name=tag::$nextRelease"
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    outputs:
+      tag: ${{ steps.new_release.outputs.tag }}
