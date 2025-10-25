@@ -1,8 +1,13 @@
 baseURL = 'https://devang.cx/'
 languageCode = 'en-us'
 title = 'Devang'
-theme = 'paper'
 
+# Theme configuration
+[module]
+  [[module.imports]]
+    path = "github.com/nanxiaobei/hugo-paper"
+
+# Markup configuration
 [markup]
   [markup.goldmark]
     [markup.goldmark.parser]
