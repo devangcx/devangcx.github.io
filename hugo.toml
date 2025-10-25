@@ -13,5 +13,24 @@ title = 'Devang Chauhan'
     [markup.goldmark.parser]
       autoHeadingID = true
 
+[outputs]
+  home = ["HTML", "RSS"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+
 [params]
+
+  # Color style
+  color = 'light' 
+
+  # Social icons
+  github = 'devangcx'               # github.com/YOUR_GITHUB_ID
+  linkedin = 'devangcx'             # linkedin.com/in/YOUR_LINKEDIN_ID
+  rss = true                        # show rss icon
+
+  # home page profile
+  avatar = 'https://www.gravatar.com/avatar/6eafd2e2c3d2416330386f46dfa8c9f1'  
+  name = 'Devang Chauhan'
+  bio = 'Software Engineer'
+
   favicon = "images/favicon.png"
