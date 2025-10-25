@@ -1,0 +1,9 @@
+baseURL = 'https://devang.cx/'
+languageCode = 'en-us'
+title = 'Devang'
+theme = 'paper'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.parser]
+      autoHeadingID = true
