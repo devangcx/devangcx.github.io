@@ -1,16 +1,12 @@
 +++
 date = '2025-10-24T22:30:43-04:00'
 draft = false
-title = 'My First Post'
+title = 'Why RAG is not enough?'
 +++
 
 
-
-# Why RAG is not enough?
-
 Last year, I built a knowledge bot POC that had this written on the landing page. 
-
-{{ $image := .Resources.Get "wombot.png" }}
+![](/images/2025-10-24-why-rag-is-not-enough/wombot.png)
 
 At the time, I was aware that function (tool) calling was something that could address these limitations. However, since RAG was commoditizing quickly, we halted the exploration and looked at off the shelf solutions.
 
