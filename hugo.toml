@@ -1,6 +1,6 @@
 baseURL = 'https://devang.cx/'
 languageCode = 'en-us'
-title = 'Devang'
+title = 'Devang Chauhan'
 
 # Theme configuration
 [module]
@@ -12,3 +12,6 @@ title = 'Devang'
   [markup.goldmark]
     [markup.goldmark.parser]
       autoHeadingID = true
+
+[params]
+  favicon = "images/favicon.png"
