@@ -117,19 +117,22 @@ jobs:
     needs: deploy
     steps:
       - uses: actions/checkout@v5
-      - name: set up node # we need node for for semantic release
+        with:
+          token: ${{ secrets.REPO_PAT }}
+          fetch-depth: 0
+      - name: Set up Node
         uses: actions/setup-node@v5
         with:
           node-version: 22.20.0
-      - name: install semantic-release
+      - name: Install semantic-release
         run: npm install @semantic-release/exec
-      - name: run semantic release
+      - name: Run semantic release
         id: new_release
         run: |
           nextRelease="`npx semantic-release@^17.0.0 --dryRun | grep -oP 'Published release \K.*? ' || true`"
           npx semantic-release@^17.0.0
           echo "::set-output name=tag::$nextRelease"
     env:
-      GITHUB_TOKEN: ${{ secrets.REPO_PAT}}
+      GITHUB_TOKEN: ${{ secrets.REPO_PAT }}
     outputs:
       tag: ${{ steps.new_release.outputs.tag }}
