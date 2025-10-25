@@ -18,6 +18,10 @@ title = 'Devang Chauhan'
   section = ["HTML", "RSS"]
   taxonomy = ["HTML", "RSS"]
 
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
+
 [params]
 
   # Color style
@@ -29,8 +33,8 @@ title = 'Devang Chauhan'
   rss = true                        # show rss icon
 
   # home page profile
-  avatar = 'https://www.gravatar.com/avatar/6eafd2e2c3d2416330386f46dfa8c9f1'  
-  name = 'Devang Chauhan'
-  bio = 'Software Engineer'
+  # avatar = 'https://www.gravatar.com/avatar/6eafd2e2c3d2416330386f46dfa8c9f1'  
+  # name = 'Devang Chauhan'
+  # bio = 'Software Engineer'
 
   favicon = "images/favicon.png"
