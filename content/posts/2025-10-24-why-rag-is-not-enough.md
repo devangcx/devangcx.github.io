@@ -187,7 +187,7 @@ But one major downside of this practice is that you are paying for the additiona
 
 How to use fine tuning to make search cheaper?
 
-{{< figure src="/images/2025-10-24-why-rag-is-not-enough/slide1-4.png" 
+{{< figure src="/images/2025-10-24-why-rag-is-not-enough/Slide1-4.png" 
 alt="Fine tuning cost" 
 caption="Image source: Microsoft AI tour presentation" >}}
 
@@ -196,39 +196,39 @@ caption="Image source: Microsoft AI tour presentation" >}}
 - This dataset could take many forms.
 - In the context of training for tone, the dataset could be input-output pairs or instructions and desired responses.
 
-{{< figure src="/images/2025-10-24-why-rag-is-not-enough/slide2-3.png" 
+{{< figure src="/images/2025-10-24-why-rag-is-not-enough/Slide2-3.png" 
 alt="Fine tuning explanation" 
 caption="Image source: Microsoft AI tour presentation" >}}
 
 Fine tuning can also be useful to add often private domain specific knowledge such as project proposals (bids), and for task-specific optimization such as Grasshopper or Dynamo workflow generation.
 
-{{< figure src="/images/2025-10-24-why-rag-is-not-enough/slide3-3.png" 
+{{< figure src="/images/2025-10-24-why-rag-is-not-enough/Slide3-3.png" 
 alt="Fine tuning domain knowledge" caption="Image source: Microsoft AI tour presentation" >}}
 
 There are several fine tuning techniques to choose from.
 
-{{< figure src="/images/2025-10-24-why-rag-is-not-enough/slide5-3.png" 
+{{< figure src="/images/2025-10-24-why-rag-is-not-enough/Slide5-3.png" 
 alt="Fine tuning techniques" caption="Image source: Microsoft AI tour presentation" >}}
 
 Increasingly, organizations are moving incorporating fine tuning in their workflows.
 
-{{< figure src="/images/2025-10-24-why-rag-is-not-enough/slide10-4.png" 
+{{< figure src="/images/2025-10-24-why-rag-is-not-enough/Slide10-4.png" 
 alt="Fine tuning workflow 1" >}}
-{{< figure src="/images/2025-10-24-why-rag-is-not-enough/slide11-4.png" 
+{{< figure src="/images/2025-10-24-why-rag-is-not-enough/Slide11-4.png" 
 alt="Fine tuning workflow 2" caption="Image source: Microsoft AI tour presentation" >}}
 
 Example of getting to the point answers with improved accuracy using RAFT.
-{{< figure src="/images/2025-10-24-why-rag-is-not-enough/slide9-4.png" alt="RAFT accuracy" >}}
-{{< figure src="/images/2025-10-24-why-rag-is-not-enough/slide12-4.png" 
+{{< figure src="/images/2025-10-24-why-rag-is-not-enough/Slide9-4.png" alt="RAFT accuracy" >}}
+{{< figure src="/images/2025-10-24-why-rag-is-not-enough/Slide12-4.png" 
 alt="RAFT answers" caption="Image source: Microsoft AI tour presentation" >}}
 
 ## Is RAFT for everyone?
 While RAFT is touted to improve the experience and accuracy of knowledge retrieval, organizations must realize the initial investment in terms of human hours and money required incorporate fine tuning in their workflows.
-{{< figure src="/images/2025-10-24-why-rag-is-not-enough/slide4-3.png" 
+{{< figure src="/images/2025-10-24-why-rag-is-not-enough/Slide4-3.png" 
 alt="RAFT investment" caption="Image source: Microsoft AI tour presentation" >}}
 
 It's a cyclical exploratory process where you start with data, choose a technique, fine tune a model, and evaluate the results. This may take several iterations and may involve changing the fine tuning techniques and hyperparameters multiple times.
-{{< figure src="/images/2025-10-24-why-rag-is-not-enough/slide7-3.png" 
+{{< figure src="/images/2025-10-24-why-rag-is-not-enough/Slide7-3.png" 
 alt="RAFT process" caption="Image source: Microsoft AI tour presentation" >}}
 ## Closing thoughts
 When every year, more and more of the knowledge bot tool chain is being commoditized, where do we focus our efforts on?
