@@ -10,3 +10,13 @@ h3:hover .heading-anchor,
 h4:hover .heading-anchor {
     opacity: 1;
 }
+
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+figcaption {
+    text-align: center;
+    font-style: italic;
+}
