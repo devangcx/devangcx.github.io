@@ -94,11 +94,15 @@ h4:hover .heading-anchor {
     opacity: 1;
 }
 ```
-To override the default heading styles, follow the steps below.
+To override the default header and footer, follow the steps below.
 1. Create a file at `layouts/partials/head.html` if it doesn't exist.
-2. Copy the `head.html` from the Paper theme located at
+and copy the `head.html` from the Paper theme located at
 `https://github.com/nanxiaobei/hugo-paper/blob/main/layouts/partials/head.html`
-to your newly created `head.html`.
+to your newly created `head.html`. Make necessary changes.
+3. Create a file at `layouts/partials/footer.html` if it doesn't exist.
+Copy the `footer.html` from the Paper theme located at
+`https://github.com/nanxiaobei/hugo-paper/blob/main/layouts/partials/footer.html`.
+Make necessary changes.
 3. At the end of the file, before the closing `</head>` tag, add the following 
 lines.
 ```html
