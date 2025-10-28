@@ -20,3 +20,7 @@ figcaption {
     text-align: center;
     font-style: italic;
 }
+
+.mr-auto {
+    margin: 0 auto;
+}
