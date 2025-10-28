@@ -5,8 +5,10 @@ title = 'Why RAG is not enough?'
 +++
 
 Last year, I built a knowledge bot POC that had this written on the landing page. 
-![](/images/2025-10-24-why-rag-is-not-enough/wombot.png)
-*Wombot landing page*
+
+{{< figure src="/images/2025-10-24-why-rag-is-not-enough/wombot.png" 
+alt="Wombot landing page" 
+caption="Wombot landing page" >}}
 
 At the time, I was aware that function (tool) calling was something that could address these limitations. However, since RAG was commoditizing quickly, we halted the exploration and looked at off the shelf solutions.
 
@@ -30,8 +32,10 @@ How does it work?
 6. These chunks along with the original question, context, and conversation history are passed to an LLM for inference.
 
 Assuming numerical factors were generated from project information documents, the chunks returned by the semantic search may resemble the following.
-![](/images/2025-10-24-why-rag-is-not-enough/semantic-search.png)
-*Sample semantic search results*
+
+{{< figure src="/images/2025-10-24-why-rag-is-not-enough/semantic-search.png" 
+alt="Sample semantic search results" 
+caption="Sample semantic search results" >}}
 
 While all of them are semantically relevant, not all of them are helpful.
 
@@ -40,8 +44,10 @@ Chunk 3 is only a partial match. While not led by John Doe, this project demonst
 Chunk 5 is a distractor. Although certified under LEED, this project is a residential development and not categorized as workplace.
 ### Web search
 Here, the bot is going to try to find the information from the blogs, company website, public project directories, green project databases, etc. And the results may resemble the following.
-![](/images/2025-10-24-why-rag-is-not-enough/web-search.png)
-*Sample web search results*
+
+{{< figure src="/images/2025-10-24-why-rag-is-not-enough/web-search.png" 
+alt="Sample web search results" 
+caption="Sample web search results" >}}
 
 Here, Green design weekly, is an example of an irrelevant web result.
 
@@ -71,8 +77,10 @@ As more and more businesses are experiencing these limitations, the ecosystem ha
 #### Keyword Search
 - Best for exact phrase matches
 - Builds an inverted index from the documents using algorithms such as BIM25 and others.
-![](/images/2025-10-24-why-rag-is-not-enough/keyword-search.png)
-*Image source: Microsoft AI tour presentation*
+
+{{< figure src="/images/2025-10-24-why-rag-is-not-enough/keyword-search.png" 
+alt="Keyword search" 
+caption="Image source: Microsoft AI tour presentation" >}}
 
 Think of inverted index as a HashMap where a word is mapped to an array of document ids it appears in.
 ```python
@@ -87,42 +95,55 @@ inverted_index = {
 #### Vector Search
 - This is something that most RAG bots already do.
 - Great for conceptually similar searches.
-![](/images/2025-10-24-why-rag-is-not-enough/vector-search.png)
-*Image source: Microsoft AI tour presentation*
+
+{{< figure src="/images/2025-10-24-why-rag-is-not-enough/vector-search.png" 
+alt="Vector search" 
+caption="Image source: Microsoft AI tour presentation" >}}
 
 #### Reciprocal Rank Fusion (RRF)
 Merge the results from the keyword search and the vector search and rank the results based off their relative ranks.
-![](/images/2025-10-24-why-rag-is-not-enough/reciprocal-rank-fusion.png)
-*Image source: Microsoft AI tour presentation*
+
+{{< figure src="/images/2025-10-24-why-rag-is-not-enough/reciprocal-rank-fusion.png" 
+alt="Reciprocal Rank Fusion" 
+caption="Image source: Microsoft AI tour presentation" >}}
 
 #### Re-Ranking
 - Use a specifically trained ranker model to give documents a relevant score according to the query.
 - Cross-encoder models like Cohere ranker are best, but LLMs can be used as well.
-![](/images/2025-10-24-why-rag-is-not-enough/re-ranking.png)
-*Image source: Microsoft AI tour presentation*
+
+{{< figure src="/images/2025-10-24-why-rag-is-not-enough/re-ranking.png" 
+alt="Re-Ranking" 
+caption="Image source: Microsoft AI tour presentation" >}}
 
 It has been observed that for most queries, the hybrid approach outperforms either just RAG, or just keyword search.
-![](/images/2025-10-24-why-rag-is-not-enough/combined-result.png)
-*Image source: Microsoft AI tour presentation*
+
+{{< figure src="/images/2025-10-24-why-rag-is-not-enough/combined-result.png" 
+alt="Combined result" 
+caption="Image source: Microsoft AI tour presentation" >}}
 
 But hybrid search is not always enough. How do you handle more complex types of queries?
 ### Relational Queries
 When your query involves relations. For example,
-![](/images/2025-10-24-why-rag-is-not-enough/relational-query.png)
-*Image source: Microsoft AI tour presentation*
+
+{{< figure src="/images/2025-10-24-why-rag-is-not-enough/relational-query.png" 
+alt="Relational query" 
+caption="Image source: Microsoft AI tour presentation" >}}
 
 Here, we can use the LLM to come up with a Graph or an SQL query to run on our Graph or a relational database respectively.
 
 The modern LLMs are becoming increasingly better at translating a user query into an SQL or a Graph query given the context and the database schemas.
 
 Using this approach assumes that the company is at at least the state-1[^2] of the data maturity journey.
-![](/images/2025-10-24-why-rag-is-not-enough/graph-query.png)
-*Image source: Microsoft AI tour presentation*
+
+{{< figure src="/images/2025-10-24-why-rag-is-not-enough/graph-query.png" 
+alt="Graph query" caption="Image source: Microsoft AI tour presentation" >}}
 
 ### Multiple Queries in One
 When a query involves multiple queries. For example,
-![](/images/2025-10-24-why-rag-is-not-enough/multiple-queries.png)
-*Image source: Microsoft AI tour presentation*
+
+{{< figure src="/images/2025-10-24-why-rag-is-not-enough/multiple-queries.png" 
+alt="Multiple queries" 
+caption="Image source: Microsoft AI tour presentation" >}}
 
 This is where the search start becoming agentic and the idea of query planning comes into play.
 
@@ -136,10 +157,11 @@ This is where the search start becoming agentic and the idea of query planning c
 - Combines the results
 - Ranks them based on the original query
 - Finally, a uniform response is provided to the client (user).
-![](/images/2025-10-24-why-rag-is-not-enough/query-planning-1.png)
-![](/images/2025-10-24-why-rag-is-not-enough/query-planning-2.png)
-![](/images/2025-10-24-why-rag-is-not-enough/query-planning-3.png)
-*Image source: Microsoft AI tour presentation*
+
+{{< figure src="/images/2025-10-24-why-rag-is-not-enough/query-planning-1.png" alt="Query planning 1">}}
+{{< figure src="/images/2025-10-24-why-rag-is-not-enough/query-planning-2.png" alt="Query planning 2" >}}
+{{< figure src="/images/2025-10-24-why-rag-is-not-enough/query-planning-3.png" alt="Query planning 3" 
+caption="Image source: Microsoft AI tour presentation" >}}
 
 ## Managed Search Solution
 Interesting to see that the Azure AI search offers all of this as a managed service[^4]. Where you are only responsible for
@@ -150,8 +172,10 @@ The rest of the heavy lifting involving
 - Building and updating database indexes,
 - Query planning
 Is done by a managed service.
-![](/images/2025-10-24-why-rag-is-not-enough/managed-search.png)
-*Image source: Microsoft AI tour presentation*
+
+{{< figure src="/images/2025-10-24-why-rag-is-not-enough/managed-search.png" 
+alt="Managed search" 
+caption="Image source: Microsoft AI tour presentation" >}}
 
 ## Making Search Cheaper
 Prompt engineering is used to add a character (personality) to a chat bot. Here, a guideline in the form of text is provided to the chat bot in terms of
@@ -162,47 +186,55 @@ Prompt engineering is used to add a character (personality) to a chat bot. Here,
 But one major downside of this practice is that you are paying for the additional tokens in all the conversations. Such costs can add up quickly when users are having multiple conversations throughout the day across the organization.
 
 How to use fine tuning to make search cheaper?
-![](/images/2025-10-24-why-rag-is-not-enough/slide1-4.png)
-*Image source: Microsoft AI tour presentation*
+
+{{< figure src="/images/2025-10-24-why-rag-is-not-enough/slide1-4.png" 
+alt="Fine tuning cost" 
+caption="Image source: Microsoft AI tour presentation" >}}
 
 ### What is fine tuning?
 - It refers to customizing a pre-trained LLM with additional training on a specific task or new dataset for enhanced performance, new skills, or improved accuracy.
 - This dataset could take many forms.
 - In the context of training for tone, the dataset could be input-output pairs or instructions and desired responses.
-![](/images/2025-10-24-why-rag-is-not-enough/slide2-3.png)
-*Image source: Microsoft AI tour presentation*
+
+{{< figure src="/images/2025-10-24-why-rag-is-not-enough/slide2-3.png" 
+alt="Fine tuning explanation" 
+caption="Image source: Microsoft AI tour presentation" >}}
 
 Fine tuning can also be useful to add often private domain specific knowledge such as project proposals (bids), and for task-specific optimization such as Grasshopper or Dynamo workflow generation.
-![](/images/2025-10-24-why-rag-is-not-enough/slide3-3.png)
-*Image source: Microsoft AI tour presentation*
+
+{{< figure src="/images/2025-10-24-why-rag-is-not-enough/slide3-3.png" 
+alt="Fine tuning domain knowledge" caption="Image source: Microsoft AI tour presentation" >}}
 
 There are several fine tuning techniques to choose from.
-![](/images/2025-10-24-why-rag-is-not-enough/slide5-3.png)
-*Image source: Microsoft AI tour presentation*
+
+{{< figure src="/images/2025-10-24-why-rag-is-not-enough/slide5-3.png" 
+alt="Fine tuning techniques" caption="Image source: Microsoft AI tour presentation" >}}
 
 Increasingly, organizations are moving incorporating fine tuning in their workflows.
-![](/images/2025-10-24-why-rag-is-not-enough/slide10-4.png)
-![](/images/2025-10-24-why-rag-is-not-enough/slide11-4.png)
-*Image source: Microsoft AI tour presentation*
+
+{{< figure src="/images/2025-10-24-why-rag-is-not-enough/slide10-4.png" 
+alt="Fine tuning workflow 1" >}}
+{{< figure src="/images/2025-10-24-why-rag-is-not-enough/slide11-4.png" 
+alt="Fine tuning workflow 2" caption="Image source: Microsoft AI tour presentation" >}}
 
 Example of getting to the point answers with improved accuracy using RAFT.
-![](/images/2025-10-24-why-rag-is-not-enough/slide9-4.png)
-![](/images/2025-10-24-why-rag-is-not-enough/slide12-4.png)
-*Image source: Microsoft AI tour presentation*
+{{< figure src="/images/2025-10-24-why-rag-is-not-enough/slide9-4.png" alt="RAFT accuracy" >}}
+{{< figure src="/images/2025-10-24-why-rag-is-not-enough/slide12-4.png" 
+alt="RAFT answers" caption="Image source: Microsoft AI tour presentation" >}}
 
 ## Is RAFT for everyone?
 While RAFT is touted to improve the experience and accuracy of knowledge retrieval, organizations must realize the initial investment in terms of human hours and money required incorporate fine tuning in their workflows.
-![](/images/2025-10-24-why-rag-is-not-enough/slide4-3.png)
-*Image source: Microsoft AI tour presentation*
+{{< figure src="/images/2025-10-24-why-rag-is-not-enough/slide4-3.png" 
+alt="RAFT investment" caption="Image source: Microsoft AI tour presentation" >}}
 
 It's a cyclical exploratory process where you start with data, choose a technique, fine tune a model, and evaluate the results. This may take several iterations and may involve changing the fine tuning techniques and hyperparameters multiple times.
-![](/images/2025-10-24-why-rag-is-not-enough/slide7-3.png)
-*Image source: Microsoft AI tour presentation*
+{{< figure src="/images/2025-10-24-why-rag-is-not-enough/slide7-3.png" 
+alt="RAFT process" caption="Image source: Microsoft AI tour presentation" >}}
 ## Closing thoughts
 When every year, more and more of the knowledge bot tool chain is being commoditized, where do we focus our efforts on?
 - It seems to be on the private data we hold as an organization.
 - Extracting and getting this data in a shape to be consumed by these knowledge retrieval pipelines seem like a high leverage activity.
-## References
+
 [^1]: https://aitour.microsoft.com/flow/microsoft/toronto26/sessioncatalog/page/sessioncatalog
 [^2]: https://pipeline2insights.substack.com/i/150965082/stage-starting-with-data
 [^3]: https://learn.microsoft.com/en-us/azure/search/agentic-retrieval-overview#:~:text=to%2Dagent%20workflows.-,Here%27s%20what%20it%20does,-%3A
