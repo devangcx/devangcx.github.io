@@ -22,6 +22,10 @@ title = 'Devang Chauhan'
   [caches.images]
     dir = ':cacheDir/images'
 
+[services]
+  [services.googleAnalytics]
+    id = "G-TEY1EQR6DL"
+
 [params]
 
   # Color style
