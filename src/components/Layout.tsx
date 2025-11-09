@@ -4,10 +4,10 @@ import { Outlet } from "react-router-dom";
 
 export default function Layout() {
     return (
-        <>
-            <Header />
+        < div className="container mx-auto my-0 border-red-800 border" >
+            < Header />
             <Outlet />
             <Footer />
-        </>
+        </div >
     )
 }
