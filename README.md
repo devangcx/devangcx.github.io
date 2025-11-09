@@ -29,29 +29,3 @@ export default defineConfig({
 })
 
 ```
-
-## Tailwind
-Add Tailwind CSS for fast UI iteration
-```
-npm install tailwindcss @tailwindcss/vite
-```
-Add to the vite config
-```
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react-swc'
-import tailwindcss from '@tailwindcss/vite'
-
-// https://vite.dev/config/
-export default defineConfig({
-  plugins: [react(), tailwindcss()],
-})
-```
-Make sure to have the following VS code extensions installed
-- Tailwind CSS Intellisense
-- PostCSS Language
-
-## Markdown
-Add dependencies to render markdown.
-```
-npm install react-markdown remark-gfm rehype-highlight
-```

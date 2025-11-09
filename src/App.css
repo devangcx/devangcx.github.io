@@ -1,5 +1,4 @@
-/* @import "tailwindcss";
-@plugin "@tailwindcss/typography"; */
+# Global CSS variables
 :root{
     --link-color: #ff3300;
 }

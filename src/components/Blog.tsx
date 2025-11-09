@@ -26,12 +26,7 @@ export default function Blog({ name }: BlogProps) {
     }, [path]);
 
     return (
-        <div className="
-        prose 
-        prose-stone 
-        sm:prose-lg 
-        mx-auto
-        ">
+        <div className="blog">
             <Markdown
                 children={content}
                 remarkPlugins={[remarkGfm]}

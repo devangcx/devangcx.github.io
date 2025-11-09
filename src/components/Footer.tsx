@@ -1,6 +1,6 @@
 export default function Footer() {
     return (
-        <footer className="mx-auto">
+        <footer className="">
             Copyright @ 2025 Devang
         </footer>
     )
