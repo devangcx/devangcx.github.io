@@ -1,7 +1,3 @@
-# Ignore public folder
-public/
-
-
 # Logs
 logs
 *.log
