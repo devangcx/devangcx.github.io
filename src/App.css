@@ -1,3 +1,7 @@
-.blog-post {
-  background-color: gray;
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+figcaption {
+    text-align: center;
+    font-style: italic;
 }
