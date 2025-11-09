@@ -1,7 +1,14 @@
-@import "tailwindcss";
-@plugin "@tailwindcss/typography";
+/* @import "tailwindcss";
+@plugin "@tailwindcss/typography"; */
+:root{
+    --link-color: #ff3300;
+}
 
 figcaption {
     text-align: center;
     font-style: italic;
+}
+
+a{
+    color: var(--link-color);
 }
