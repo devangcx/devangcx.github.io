@@ -233,7 +233,7 @@ alt="RAFT process" caption="Image source: Microsoft AI tour presentation" >}}
 ## Closing thoughts
 When every year, more and more of the knowledge bot tool chain is being commoditized, where do we focus our efforts on?
 - It seems to be on the private data we hold as an organization.
-- Extracting and getting this data in a shape to be consumed by these knowledge retrieval pipelines seem like a high leverage activity.
+- Extracting and getting this data in a shape to be consumed by these knowledge retrieval pipelines seems like a high leverage activity.
 
 [^1]: https://aitour.microsoft.com/flow/microsoft/toronto26/sessioncatalog/page/sessioncatalog
 [^2]: https://pipeline2insights.substack.com/i/150965082/stage-starting-with-data
