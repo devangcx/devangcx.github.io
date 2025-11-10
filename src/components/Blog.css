@@ -4,11 +4,14 @@
 }
 
 .blog img {
-    max-width: 80%;
+    max-width: 70%;
     object-fit: contain;
+    margin: 1em 0;
 }
 
 figcaption {
     text-align: center;
     font-style: italic;
+    color: gray;
+    margin-bottom: 1em;
 }
