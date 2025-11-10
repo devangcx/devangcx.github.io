@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 
+import "./Blog.css";
+
 import Image from "./Image";
 
 import Markdown from "react-markdown";
@@ -26,7 +28,7 @@ export default function Blog({ name }: BlogProps) {
     }, [path]);
 
     return (
-        <div className="blog">
+        <div className="container blog">
             <Markdown
                 children={content}
                 remarkPlugins={[remarkGfm]}
