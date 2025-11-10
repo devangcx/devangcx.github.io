@@ -38,44 +38,6 @@ body {
     padding-bottom: 90px;
 }
 
-header {
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 90px 0;
-}
-
-.name {
-    font-family: "Poppins", sans-serif;
-    display: flex;
-}
-
-.name-letter {
-    font-weight: 400;
-}
-
-.indian-saffron {
-    color: var(--indian-saffron-color);
-}
-
-.indian-blue {
-    color: var(--indian-blue-color);
-}
-
-.indian-green {
-    color: var(--indian-green-color);
-}
-
-footer {
-    height: 90px;
-    color: #999;
-    font-size: 1.4rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 a {
     color: var(--indian-saffron-color);
 }
