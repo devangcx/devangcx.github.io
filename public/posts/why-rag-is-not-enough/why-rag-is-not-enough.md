@@ -1,6 +1,7 @@
 # Why RAG is not enough?
 
 Last year, I built a knowledge bot POC that had this written on the landing page. 
+
 ![Wombot landing page](/posts/why-rag-is-not-enough/wombot.png)
 
 At the time, I was aware that function (tool) calling was something that could address these limitations. However, since RAG was commoditizing quickly, we halted the exploration and looked at off the shelf solutions.
