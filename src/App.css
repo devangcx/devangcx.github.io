@@ -1,7 +1,7 @@
 /* Global CSS variables */
 :root {
     --link-color: #ff3300;
-    --font-family: "Roboto", sans-serif;
+    --font-family: "EB Garamond", "Helvetica Neue", "Segoe UI", sans-serif;
     --background-color: #f6f6f6;
 }
 
@@ -14,6 +14,9 @@
 body,
 input {
     font-family: var(--font-family);
+    font-size: 1.625rem;
+    line-height: 1.4;
+    font-weight: 400;
 }
 
 body {

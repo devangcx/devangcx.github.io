@@ -28,7 +28,7 @@ export default function Blog({ name }: BlogProps) {
     }, [path]);
 
     return (
-        <div className="container blog">
+        <div className="blog">
             <Markdown
                 children={content}
                 remarkPlugins={[remarkGfm]}
