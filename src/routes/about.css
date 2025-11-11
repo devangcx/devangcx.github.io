@@ -29,6 +29,11 @@
     margin-top: 0;
 }
 
+span {
+    display: inline;
+    padding: 0 0.3em;
+}
+
 /* All mobile screens */
 @media only screen and (max-width: 600px) {
 

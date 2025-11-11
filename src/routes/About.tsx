@@ -17,8 +17,21 @@ export default function About() {
                 <p>This site is currently a work in progress and I plan to
                     fully build this over the next year.
                 </p>
+
+                <p>If the look and feel of this website feels familiar to you,
+                    you have a great taste in people. It is inspired by
+                    <span>
+                        <a href="https://nadh.in/" target="blank">Kailash Nadh's</a>
+                    </span>
+                    personal website. Kailash is one of the few engineers I
+                    have come to admire from afar. While his site is
+                    most likely built using the static site generator Hugo, I
+                    had fun implementing a similar design purely in React
+                    and CSS.
+                </p>
             </div>
             <img src="me.png" alt="Devang's Avatar" />
         </div>
     );
 }
+
