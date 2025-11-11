@@ -11,19 +11,21 @@ import rehypeHighlight from "rehype-highlight";
 
 
 export default function Post() {
-    const { slug } = useParams();
+    const { slug = "" } = useParams();
     const [content, setContent] = useState<string>("Loading...");
 
     // Construct the path to the markdown file based on the name
     // Here, it is assumed that the markdown blog will be located
     // in the folder with the same name as the markdown file.
-    const path: string = `/posts/${slug}/${slug}.md`
+    const path = `/posts/${slug}/${slug}.md`
 
     useEffect(() => {
         fetch(path)
             .then((res) => res.text())
             .then(setContent)
-            .catch(() => setContent("Error loading blog post."));
+            .catch(() => {
+                setContent("Error loading blog post.")
+            });
     }, [path]);
 
     return (
@@ -35,9 +37,9 @@ export default function Post() {
 
                 // Mapping markdown elements to custom React components
                 components={{
-                    img: ({ node, ...props }) => {
-                        const src = props.src || "";
-                        const alt = props.alt || "";
+                    img: ({ ...props }) => {
+                        const src = props.src ?? "";
+                        const alt = props.alt ?? "";
                         const caption = alt;
                         return <Image src={src} alt={alt} caption={caption} />;
                     }
