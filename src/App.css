@@ -32,12 +32,6 @@ body {
     margin: 0 auto;
 }
 
-.page {
-    background-color: white;
-    padding-top: 0;
-    padding-bottom: 90px;
-}
-
 a {
     color: var(--indian-saffron-color);
 }

@@ -9,9 +9,7 @@ export default function Header() {
                 <h1 className="name-letter indian-green">ग</h1>
             </div>
             <nav>
-                <a href="/">Home</a>
-                <a href="/blog">Blog</a>
-                <a href="/work">Work</a>
+                <a href="/">Blog</a>
             </nav>
         </header>
     )

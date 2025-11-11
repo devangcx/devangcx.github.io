@@ -1,9 +1,15 @@
-.blog figure {
+.post {
+    background-color: white;
+    padding-top: 0;
+    padding-bottom: 90px;
+}
+
+.post figure {
     text-align: center;
     margin: 0 auto;
 }
 
-.blog img {
+.post img {
     max-width: 70%;
     object-fit: contain;
     margin: 1em 0;

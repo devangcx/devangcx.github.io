@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import "./Blog.css";
+import "./Post.css";
 
 import Image from "./Image";
 
@@ -8,11 +8,11 @@ import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeHighlight from "rehype-highlight";
 
-interface BlogProps {
-    name: string; // Name of the blog post to load
+interface PostProps {
+    name: string; // Name of the post to load
 }
 
-export default function Blog({ name }: BlogProps) {
+export default function Post({ name }: PostProps) {
     const [content, setContent] = useState<string>("Loading...");
 
     // Construct the path to the markdown file based on the name
@@ -28,7 +28,7 @@ export default function Blog({ name }: BlogProps) {
     }, [path]);
 
     return (
-        <div className="blog">
+        <div className="post">
             <Markdown
                 children={content}
                 remarkPlugins={[remarkGfm]}
