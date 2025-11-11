@@ -36,3 +36,18 @@ body {
 a {
     color: var(--indian-saffron-color);
 }
+
+/* All mobile screens */
+@media only screen and (max-width: 600px) {
+
+    body,
+    input {
+        font-size: 1rem;
+    }
+
+    .container {
+        padding-right: 20px;
+        padding-left: 20px;
+        max-width: 100%;
+    }
+}

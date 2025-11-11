@@ -6,3 +6,12 @@ footer {
     align-items: center;
     justify-content: center;
 }
+
+/* All mobile screens */
+@media only screen and (max-width: 600px) {
+    footer {
+        height: auto;
+        padding: 1em 0;
+        font-size: 1rem;
+    }
+}
