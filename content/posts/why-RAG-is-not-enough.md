@@ -4,6 +4,8 @@ draft = false
 title = 'Why RAG is not enough?'
 +++
 
+# Why RAG is not enough?
+
 Last year, I built a knowledge bot POC that had this written on the landing page. 
 
 {{< figure src="/images/why-rag-is-not-enough/wombot.png" 
