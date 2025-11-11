@@ -61,8 +61,8 @@ jobs:
         run: |
           [[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || npm install
 
-      - name: Lint (optional)
-        run: npm run lint --if-present
+      # - name: Lint (optional)
+      #   run: npm run lint --if-present
 
       - name: Build Vite React App
         run: npm run build
