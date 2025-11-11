@@ -1,0 +1,10 @@
+{
+    "posts": [
+        {
+            "title": "Why RAG is not enough?",
+            "date": "24 October 2024",
+            "slug": "why-rag-is-not-enough",
+            "summary": "The limitations of RAG and where the ecosystem is going."
+        }
+    ]
+}
