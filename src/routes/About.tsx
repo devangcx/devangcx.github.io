@@ -26,8 +26,7 @@ export default function About() {
                     personal website. Kailash is one of the few engineers I
                     have come to admire from afar. While his site is
                     most likely built using the static site generator Hugo, I
-                    had fun implementing a similar design purely in React
-                    and CSS.
+                    had fun implementing a similar design purely in React + CSS.
                 </p>
             </div>
             <img src="me.png" alt="Devang's Avatar" />
