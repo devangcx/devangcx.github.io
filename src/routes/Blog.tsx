@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
-import "./Blog.css";
-import Data from "../index.json";
+import "./blog.css";
 
+import Data from "../index.json";
 
 export default function Blog() {
 
