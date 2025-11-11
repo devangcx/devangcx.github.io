@@ -1,4 +1,4 @@
-# Personal blog
+## Personal blog
 This has gone through several iterations in terms of style, and technology
 over the years.
 - Started off as a HTML + CSS + JS [site](https://github.com/devangcx/devangcx.github.io/tree/d20e14dc22c0e613819ff77af03514c00c808eb8) and remained in that form for a long time.
