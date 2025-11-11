@@ -10,6 +10,7 @@ export default function Header() {
             </div>
             <nav>
                 <a href="/">Blog</a>
+                <a href="/about">About</a>
             </nav>
         </header>
     )
