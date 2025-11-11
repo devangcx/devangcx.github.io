@@ -19,7 +19,7 @@ export default function Blog() {
             {posts.map((post) => (
                 <div className="blog-card">
                     <p className="date">{post.date}</p>
-                    <Link to={`blog/${post.slug}`}>
+                    <Link to={`/blog/${post.slug}`}>
                         <p className="title">{post.title}</p>
                     </Link>
                     <p className="summary">{post.summary}</p>
