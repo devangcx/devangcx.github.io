@@ -2,9 +2,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import "./app.css";
 
-import Layout from "./components/Layout"
 import Blog from "./routes/Blog";
-import Work from "./routes/Work";
+import About from "./routes/About";
+
+import Layout from "./components/Layout"
 import Post from "./components/Post";
 
 export default function App() {
@@ -13,7 +14,7 @@ export default function App() {
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Blog />} />
-          <Route path="/work" element={<Work />} />
+          <Route path="/about" element={<About />} />
           <Route path="/blog/:slug" element={<Post />} />
         </Route>
       </Routes>
