@@ -3,3 +3,22 @@
     flex: 1;
     width: 100%;
 }
+
+.blog-card {
+    margin-bottom: 2.8em;
+}
+
+.blog-card .date {
+    color: var(--gray-text-color);
+}
+
+.blog-card .title {
+    color: var(--indian-saffron-color);
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.blog-card .summary {
+    color: var(--gray-text-color);
+    font-style: italic;
+}

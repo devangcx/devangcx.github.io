@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
 import "./Post.css";
 
@@ -8,17 +9,15 @@ import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeHighlight from "rehype-highlight";
 
-interface PostProps {
-    name: string; // Name of the post to load
-}
 
-export default function Post({ name }: PostProps) {
+export default function Post() {
+    const { slug } = useParams();
     const [content, setContent] = useState<string>("Loading...");
 
     // Construct the path to the markdown file based on the name
     // Here, it is assumed that the markdown blog will be located
     // in the folder with the same name as the markdown file.
-    const path: string = `/posts/${name}/${name}.md`
+    const path: string = `/posts/${slug}/${slug}.md`
 
     useEffect(() => {
         fetch(path)
@@ -28,7 +27,7 @@ export default function Post({ name }: PostProps) {
     }, [path]);
 
     return (
-        <div className="post">
+        <div className="container post">
             <Markdown
                 children={content}
                 remarkPlugins={[remarkGfm]}

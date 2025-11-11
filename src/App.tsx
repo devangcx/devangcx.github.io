@@ -4,6 +4,7 @@ import "./App.css";
 import Layout from "./components/Layout"
 import Blog from "./routes/Blog";
 import Work from "./routes/Work";
+import Post from "./components/Post";
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
         <Route element={<Layout />}>
           <Route path="/" element={<Blog />} />
           <Route path="/work" element={<Work />} />
+          <Route path="/blog/:slug" element={<Post />} />
         </Route>
       </Routes>
     </BrowserRouter>

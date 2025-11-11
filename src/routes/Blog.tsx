@@ -1,7 +1,9 @@
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
+
 import "./Blog.css";
 import Data from "../data.json";
-import BlogCard from "../components/BlogCard";
+
 
 export default function Blog() {
 
@@ -14,13 +16,14 @@ export default function Blog() {
 
     return (
         <div className="container blog">
-            {posts.map((post, index) => (
-                <BlogCard
-                    key={index}
-                    title={post.title}
-                    date={post.date}
-                    summary={post.summary}
-                />
+            {posts.map((post) => (
+                <div className="blog-card">
+                    <p className="date">{post.date}</p>
+                    <Link to={`blog/${post.slug}`}>
+                        <p className="title">{post.title}</p>
+                    </Link>
+                    <p className="summary">{post.summary}</p>
+                </div>
             ))}
         </div>
     );
