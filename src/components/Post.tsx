@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-import "./Post.css";
+import "./post.css";
 
 import Image from "./Image";
 
