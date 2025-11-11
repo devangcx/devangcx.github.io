@@ -1,7 +1,6 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://devang.cx/'
 languageCode = 'en-us'
 title = 'Devang Chauhan'
-
 
 [taxonomies]
 tag = "tags"
