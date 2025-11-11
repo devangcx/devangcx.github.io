@@ -5,6 +5,7 @@
     --indian-saffron-color: rgb(255, 104, 26);
     --indian-blue-color: rgb(1, 0, 142);
     --indian-green-color: rgb(0, 106, 53);
+    --gray-text-color: #666;
 }
 
 * {
@@ -16,7 +17,7 @@
 body,
 input {
     font-family: var(--font-family);
-    font-size: 1.625rem;
+    font-size: 1.4rem;
     line-height: 1.4;
     font-weight: 400;
 }
