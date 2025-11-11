@@ -6,14 +6,14 @@
     <description>Recent content in Home on Devang Chauhan</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 11 Nov 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 24 Oct 2025 22:30:43 -0400</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>My First Post</title>
-      <link>http://localhost:1313/posts/my-first-post/</link>
-      <pubDate>Tue, 11 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/my-first-post/</guid>
-      <description>&lt;p&gt;Hello Hugo!&lt;/p&gt;</description>
+      <title>Why RAG is not enough?</title>
+      <link>http://localhost:1313/posts/why-rag-is-not-enough/</link>
+      <pubDate>Fri, 24 Oct 2025 22:30:43 -0400</pubDate>
+      <guid>http://localhost:1313/posts/why-rag-is-not-enough/</guid>
+      <description>&lt;p&gt;Last year, I built a knowledge bot POC that had this written on the landing page.&lt;/p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;http://localhost:1313/images/2025-10-24-why-rag-is-not-enough/wombot.png&#34;&#xA;    alt=&#34;Wombot landing page&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;p&gt;Wombot landing page&lt;/p&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;At the time, I was aware that function (tool) calling was something that could address these limitations. However, since RAG was commoditizing quickly, we halted the exploration and looked at off the shelf solutions.&lt;/p&gt;&#xA;&lt;p&gt;Fast forward to a year, I attended the Microsoft&amp;rsquo;s AI tour&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; to see what they&amp;rsquo;re up to and was glad to see that knowledge bot ecosystem has well defined solutions for all these limitations.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
