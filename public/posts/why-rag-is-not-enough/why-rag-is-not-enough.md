@@ -14,7 +14,7 @@ Before looking at the solutions, let's understand these limitations.
 
 How will such a bot answer the following question?
 
-> Find me all the workplace themed LEED certified projects in Sydney done by design principal John Doe. 
+> Find me all the workplace themed LEED certified projects in Sydney done by design principal John Doe?
 ### Semantic Search
 
 How does it work?
