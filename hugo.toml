@@ -5,7 +5,13 @@ title = 'Devang Chauhan'
 [services]
   [services.googleAnalytics]
     id = "G-TEY1EQR6DL"
-    
+
 [taxonomies]
 tag = "tags"
 category = "categories"
+
+[params]
+  description = "Devang Chauhan's thogughts and works in the realsm of software engineering and architecture."
+  images = ["/images/social-preview.png"]
+  title = 'Devang Chauhan'
+
