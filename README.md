@@ -13,13 +13,20 @@ do that, you need to figure out serving full HTML files for your articles / rout
 These HTML files are necessary for thr search engine bots to you catalogue your
 articles.
 
-While it is possible to do this using React + Next.js or using many other
-alternatives. It seemed like I was using the wrong tool for the job.
+While it is possible to do this using React + Next.js (or using many other
+alternatives). It seemed like wrong tool for the job.
 
 Hugo supports generating HTML files for the articles along with out of the box
 SEO metadata injection to the articles. The more you use it the more you 
 realize that the framework is truly built to handle the use case of having
 deeply hierarchical static content (documentation) sites.
+
+This was one of those moments when I faced a dilemma of whether I force my will and
+keep pushing through the React ecosystem that I have come to enjoy, or do I do
+adopt something completely new, a templating DSL.
+
+I am feeling happy with Hugo so far. No only because it seems like the right tool
+for the job, but also because of the humility this experience brought to me.
 
 ## Local build
 Follow the steps below to install Hugo on your local machine.
