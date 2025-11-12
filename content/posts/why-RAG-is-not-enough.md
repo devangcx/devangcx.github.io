@@ -2,6 +2,7 @@
 date = '2025-10-24T22:30:43-04:00'
 draft = false
 title = 'Why RAG is not enough?'
+description = 'First blog'
 +++
 
 # Why RAG is not enough?
