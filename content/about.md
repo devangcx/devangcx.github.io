@@ -1,6 +1,8 @@
+---
+layout: "about"
+---
 
-
-#h2 Engineer / Architect
+## Engineer / Architect
 
 I am currently a software engineer.
 
@@ -12,6 +14,5 @@ This site is currently a work in progress and I plan to fully build this over th
 If the look and feel of this website feels familiar to you,
 you have a great taste in people. It is inspired by [Kailash Nadh's](https://nadh.in/)
 personal website. Kailash is one of the few engineers I have come to admire 
-from afar. While his site is most likely built using the static site generator 
-Hugo, I had fun implementing a similar design purely in React + CSS.
+from afar.
                 
