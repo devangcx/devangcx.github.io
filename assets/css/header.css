@@ -4,7 +4,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 90px 0;
+    padding: 1em 0;
     align-items: center;
 }
 
@@ -42,7 +42,6 @@ nav a {
     header {
         flex-direction: column;
         padding: 0 0 1em 0;
-        border-bottom: 1px solid #eee;
     }
 
     .name-letter {
