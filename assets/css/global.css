@@ -1,9 +1,9 @@
 :root {
     --font-family: "EB Garamond", "Helvetica Neue", "Segoe UI", sans-serif;
     --background-color: #f6f6f6;
-    --indian-saffron-color: rgb(255, 104, 26);
-    --indian-blue-color: rgb(1, 0, 142);
-    --indian-green-color: rgb(0, 106, 53);
+    --indian-saffron: rgb(255, 104, 26);
+    --indian-blue: rgb(1, 0, 142);
+    --indian-green: rgb(0, 106, 53);
     --gray-text-color: #666;
 }
 
@@ -40,7 +40,7 @@ main {
 }
 
 a {
-    color: var(--indian-saffron-color);
+    color: var(--indian-saffron);
 }
 
 /* All mobile screens */
