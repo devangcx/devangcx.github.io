@@ -1,6 +1,34 @@
 {{ define "main" }}
-  {{ .Content }}
-  {{ range .Site.RegularPages }}
-    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-  {{ end }}
+  <main class="container home">
+    <div class="story">
+      <div class="intro">
+
+          <h2 class="title">Engineer / Architect</h2>
+
+          <p>I am currently a software engineer.</p>
+
+          <p>In the past, I have been a design technologist,
+              a building performance consultant, an architect,
+              a project manager, and a team leader.
+          </p>
+
+          <p>This site is currently a work in progress and I plan to
+              fully build this over the next year.
+          </p>
+      </div>
+      <img src="/images/me.png" alt="Devang's Avatar" />
+    </div>
+    
+    <div class="recent-posts">
+      <h2>Recent Posts:</h2>
+
+      {{ range .Site.RegularPages }}
+        <div class="blog-card">
+            <p class="date">{{ .Date | time.Format ":date_medium"}}</p>
+            <a class="title" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+            <p class="summary">{{ .Description }}</p>
+        </div>
+      {{ end }}
+    </div>
+  </main>
 {{ end }}

@@ -9,11 +9,11 @@
   {{ $header := resources.Get "css/header.css" }}
   {{ $footer := resources.Get "css/footer.css" }}
   {{ $post := resources.Get "css/post.css" }}
-  {{ $about := resources.Get "css/about.css" }}
+  {{ $home := resources.Get "css/home.css" }}
   {{ $work := resources.Get "css/blog.css" }}
 
   <!-- Combine all CSS files into one, then minify and fingerprint for production -->
-  {{ $bundled := slice $global $header $footer $post $about $work | resources.Concat "css/bundle.css" | minify | fingerprint }}
+  {{ $bundled := slice $global $header $footer $post $home $work | resources.Concat "css/bundle.css" | minify | fingerprint }}
   
   <!-- Link the bundled CSS file -->
   <link rel="stylesheet" href="{{ $bundled.RelPermalink }}" integrity="{{ $bundled.Data.Integrity }}">
