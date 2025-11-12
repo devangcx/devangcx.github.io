@@ -19,21 +19,21 @@ header {
 }
 
 .indian-saffron {
-    color: var(--indian-saffron-color);
+    color: var(--indian-saffron);
 }
 
 .indian-blue {
-    color: var(--indian-blue-color);
+    color: var(--indian-blue);
 }
 
 .indian-green {
-    color: var(--indian-green-color);
+    color: var(--indian-green);
 }
 
 nav a {
     margin-right: 1.8em;
     text-decoration: none;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 /* All mobile screens */
