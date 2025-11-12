@@ -2,9 +2,11 @@
     <main class="container blog">
         {{ .Content }}
         {{ range .Pages }}
+        <div class="blog-card">
             <p class="date">{{ .Date | time.Format ":date_medium"}}</p>
-            <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
-            <p>{{ .Description }}</p>
+            <a class="title" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+            <p class="summary">{{ .Description }}</p>
+        </div>
         {{ end }}
     </main>
 {{ end }}
