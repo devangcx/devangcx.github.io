@@ -21,7 +21,7 @@ SEO metadata injection to the articles. The more you use it the more you
 realize that the framework is truly built to handle the use case of having
 deeply hierarchical static content (documentation) sites.
 
-This was one of those moments when I faced a dilemma of whether I force my will and
+This was one of those moments when I faced the dilemma of whether I force my will and
 keep pushing through the React ecosystem that I have come to enjoy, or do I do
 adopt something completely new, a templating DSL.
 
