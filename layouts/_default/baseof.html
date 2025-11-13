@@ -1,15 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <link rel="icon" type="image/png" href="/images//favicon.png" />
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="/images/favicon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{{ .Title }}</title>
+  
+  <!-- Dynamic title -->
+  <title>{{ if .IsHome }}Devang Chauhan | Software Engineer {{ else }}{{ .Title }} | Devang Chauhan{{ end }}</title>
 
+  <!-- Description meta (falls back to site param) -->
+  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}" />
+  <meta name="author" content="Devang Chauhan" />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="{{ .Permalink }}" />
+
+  <!-- Open Graph & Twitter cards -->
   {{ partial "opengraph.html" . }}
   {{ partial "twitter_cards.html" . }}
-  
-  <!-- Get the specific CSS files -->
+
+  <!-- JSON-LD Person schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Devang Chauhan",
+    "url": "https://devang.cx",
+    "sameAs": [
+      "https://www.linkedin.com/in/devangcx/",
+      "https://github.com/devangcx",
+      "https://x.com/devangcx"
+    ],
+    "jobTitle": "Software Engineer",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Woods Bagot"
+    }
+  }
+  </script>
+
+  <!-- Global styles -->
   {{ $global := resources.Get "css/global.css" }}
   {{ $header := resources.Get "css/header.css" }}
   {{ $footer := resources.Get "css/footer.css" }}
@@ -17,10 +47,7 @@
   {{ $home := resources.Get "css/home.css" }}
   {{ $work := resources.Get "css/blog.css" }}
 
-  <!-- Combine all CSS files into one, then minify and fingerprint for production -->
   {{ $bundled := slice $global $header $footer $post $home $work | resources.Concat "css/bundle.css" | minify | fingerprint }}
-  
-  <!-- Link the bundled CSS file -->
   <link rel="stylesheet" href="{{ $bundled.RelPermalink }}" integrity="{{ $bundled.Data.Integrity }}">
 
   <!-- Fonts -->
@@ -28,8 +55,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Sitemap reference for clarity -->
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="https://devang.cx/sitemap.xml" />
 </head>
+
 {{ partial "google_analytics.html" . }}
+
 <body>
   {{ partial "header.html" . }}
   {{ block "main" . }}{{ end }}

@@ -2,16 +2,49 @@ baseURL = 'https://devang.cx/'
 languageCode = 'en-us'
 title = 'Devang Chauhan'
 
+# Enable automatic sitemap and robots.txt generation
+enableRobotsTXT = true
+
 [services]
   [services.googleAnalytics]
     id = "G-TEY1EQR6DL"
 
 [taxonomies]
-tag = "tags"
-category = "categories"
+  tag = "tags"
+  category = "categories"
 
 [params]
-  description = "Devang Chauhan's thogughts and works in the realsm of software engineering and architecture."
+  # General site info
+  author = "Devang Chauhan"
+  description = "Devang Chauhan’s thoughts and works at the intersection of software engineering, distributed systems, and architecture."
   images = ["/images/social-preview.png"]
-  title = 'Devang Chauhan'
+  title = "Devang Chauhan"
+  keywords = [
+    "Devang Chauhan", "Software Engineer", "Design Technologist", 
+    "Distributed Systems", "Python", "Architecture", "Woods Bagot", 
+    "Pollination", "Ladybug Tools"
+  ]
 
+  # Social links (for structured data + Open Graph)
+  linkedin = "https://www.linkedin.com/in/devangcx/"
+  github = "https://github.com/devangcx"
+  twitter = "https://x.com/devangcx"
+
+  # SEO & sharing defaults
+  defaultImage = "/images/social-preview.png"
+  twitterCard = "/images/social-preview.png"
+  locale = "en_US"
+
+  # JSON-LD defaults
+  organization = "Woods Bagot"
+  jobTitle = "Software Engineer"
+
+[sitemap]
+  changefreq = "weekly"
+  priority = 0.5
+  filename = "sitemap.xml"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true  # allow raw HTML inside markdown (needed for figures, iframes, etc.)

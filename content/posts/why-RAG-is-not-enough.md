@@ -4,6 +4,7 @@ draft = false
 title = 'Why RAG is not enough?'
 description = 'The limitations of RAG and where the knowledge bot pipeline ecosystem is going.'
 layout= 'post'
+author= 'Devang Chauhan'
 +++
 
 # Why RAG is not enough?

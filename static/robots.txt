@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://devang.cx/sitemap.xml
