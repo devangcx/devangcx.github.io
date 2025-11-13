@@ -4,9 +4,7 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/png" href="/images/favicon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <!-- Dynamic title -->
-  <title>{{ if .IsHome }}Devang Chauhan | Software Engineer {{ else }}{{ .Title }} | Devang Chauhan{{ end }}</title>
+  <title>{{ .Title }}</title>
 
   <!-- Description meta (falls back to site param) -->
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}" />
