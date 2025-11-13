@@ -1,0 +1,8 @@
+{{- $pages := . -}}
+{{ range $pages }}
+  <div class="blog-card">
+      <p class="date">{{ .Date | time.Format ":date_medium" }}</p>
+      <a class="title" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+      <p class="summary">{{ .Description }}</p>
+  </div>
+{{ end }}
