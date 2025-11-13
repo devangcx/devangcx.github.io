@@ -19,14 +19,7 @@
     
     <div class="recent-posts">
       <h2>Recent Posts:</h2>
-
-      {{ range .Site.RegularPages }}
-        <div class="blog-card">
-            <p class="date">{{ .Date | time.Format ":date_medium"}}</p>
-            <a class="title" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
-            <p class="summary">{{ .Description }}</p>
-        </div>
-      {{ end }}
+      {{ partial "blog-cards.html" .Site.RegularPages }}
     </div>
   </main>
 {{ end }}
