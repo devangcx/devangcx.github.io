@@ -1,0 +1,11 @@
+{{ define "main" }}
+  <main class="container posts">
+
+    <h2 class="tag-title">{{ .Title }}</h2>
+
+    <div class="tag-posts">
+      {{ partial "post-list.html" .Pages }}
+    </div>
+
+  </main>
+{{ end }}
