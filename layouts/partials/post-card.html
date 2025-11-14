@@ -1,8 +1,6 @@
-{{- $pages := . -}}
-{{ range $pages }}
-  <div class="post-card">
-      <p class="date">{{ .Date | time.Format ":date_medium" }}</p>
-      <a class="title" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
-      <p class="summary">{{ .Description }}</p>
-  </div>
-{{ end }}
+<div class="post-card">
+    <p class="date">{{ .Date | time.Format ":date_medium" }}</p>
+    <a class="title" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+    <p class="summary">{{ .Description }}</p>
+</div>
+
