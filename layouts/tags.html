@@ -1,6 +1,5 @@
 {{ define "main" }}
 <main class="container tags">
-  <h2>{{ .Title }}</h2>
   <ul>
     {{ range .Data.Terms.Alphabetical }}
       <li><a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a></li>
