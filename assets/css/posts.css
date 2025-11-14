@@ -1,31 +1,31 @@
-.blog {
+.posts {
     background-color: white;
     flex: 1;
     width: 100%;
 }
 
-.blog-card {
+.post-card {
     margin-bottom: 1.5em;
 }
 
-.blog-card .date {
+.post-card .date {
     color: var(--gray-text-color);
 }
 
-.blog-card .title {
+.post-card .title {
     color: var(--indian-saffron);
     font-size: 1.6rem;
     font-weight: 600;
 }
 
-.blog-card .summary {
+.post-card .summary {
     color: var(--gray-text-color);
     font-style: italic;
 }
 
 /* All mobile screens */
 @media only screen and (max-width: 600px) {
-    .blog {
+    .posts {
         padding-top: 1em;
     }
 }

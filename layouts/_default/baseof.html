@@ -43,10 +43,10 @@
   {{ $footer := resources.Get "css/footer.css" }}
   {{ $post := resources.Get "css/post.css" }}
   {{ $home := resources.Get "css/home.css" }}
-  {{ $work := resources.Get "css/blog.css" }}
+  {{ $posts := resources.Get "css/posts.css" }}
   {{ $tags := resources.Get "css/tags.css" }}
 
-  {{ $bundled := slice $global $header $footer $post $home $work $tags | resources.Concat "css/bundle.css" | minify | fingerprint }}
+  {{ $bundled := slice $global $header $footer $post $home $posts $tags | resources.Concat "css/bundle.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $bundled.RelPermalink }}" integrity="{{ $bundled.Data.Integrity }}">
 
   <!-- Fonts -->
