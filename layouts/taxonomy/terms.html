@@ -1,9 +1,0 @@
-{{ define "main" }}
-<main class="container tags">
-  <ul>
-    {{ range .Data.Terms.Alphabetical }}
-      <li><a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a></li>
-    {{ end }}
-  </ul>
-</main>
-{{ end }}
